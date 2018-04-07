@@ -1,4 +1,6 @@
 @font-face {
     font-family: 'Avenir LT Std 35 Light'; /*a name to be used later*/
-
+}
+body {
+    background-image: linear-gradient(to right, #46BA97 0%, #8FE2D9 100%)
 }

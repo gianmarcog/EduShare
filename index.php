@@ -12,7 +12,7 @@
     <!-- every row must have 12 columns -->
     <div class=”row”>
         <div class=”col-md-12”>
-            4 Hello world
+            4 Hello world11
         </div>
 
         <div class=”col-md-8”>
