@@ -21,5 +21,10 @@
         </div>
     </div>
 </div>
+
+<div>
+    <img src="image/EduShare.png">
+</div>
+
 </body>
 </html>
