@@ -68,6 +68,10 @@ h5 {
     overflow-wrap: break-word;
 }
 
-.navbar{
-min-height: 200px;
+.dropdown {
+    float: left;
+}
+
+.blue-icon{
+    color: rgb(0, 69, 97) !important;
 }
