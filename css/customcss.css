@@ -54,14 +54,13 @@ h5 {
     border-radius: 1rem !important;
 }
 
+.objectfit{
+    object-fit: cover
+}
 @media (max-width: 600px) {
     .carousel-caption {
         display: none;
     }
-}
-
-#login {
-    margin: 13px;
 }
 
 #subtext {
