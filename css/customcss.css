@@ -57,6 +57,11 @@ h5 {
 .objectfit{
     object-fit: cover
 }
+
+.dropdown {
+    float: left;
+}
+
 @media (max-width: 600px) {
     .carousel-caption {
         display: none;
@@ -67,10 +72,6 @@ h5 {
     overflow-wrap: break-word;
 }
 
-.dropdown {
-    float: left;
-}
-
-.blue-icon{
-    color: rgb(0, 69, 97) !important;
+#social {
+    color: #004561;
 }
