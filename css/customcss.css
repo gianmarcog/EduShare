@@ -75,3 +75,7 @@ h5 {
 #social {
     color: #004561;
 }
+
+#social:hover{
+    color: #46BA97;
+}
