@@ -72,10 +72,10 @@ h5 {
     overflow-wrap: break-word;
 }
 
-#social {
+.social {
     color: #004561;
 }
 
-#social:hover{
+.social:hover{
     color: #46BA97;
 }
