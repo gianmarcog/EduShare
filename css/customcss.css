@@ -68,14 +68,22 @@ h5 {
     }
 }
 
-#subtext {
-    overflow-wrap: break-word;
-}
-
 .social {
     color: #004561;
 }
 
 .social:hover{
     color: #46BA97;
+}
+
+.btn:focus {
+    outline: 0 !important;
+    outline-offset: 0  !important;
+    background-image: none  !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none  !important;
+}
+
+#subtext {
+    overflow-wrap: break-word;
 }
