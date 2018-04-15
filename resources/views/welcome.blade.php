@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <title>EduShare</title>
-    <link rel="icon" href="image/Logosmall.png">
+    <link rel="icon" href="/image/Logosmall.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/customcss.css">
+    <link rel="stylesheet" href="/css/customcss.css">
 
 </head>
 
 <body>
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="https://edushare.reneborner.de">
-        <img src="image/EduShare.png" width="70" height="60" alt="">
+        <img src="/image/EduShare.png" width="70" height="60" alt="">
 
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -30,16 +30,16 @@
                 <a class="nav-link" href="#">Übersicht <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Parking/Parking%20Page.html">Forum</a>
+                <a class="nav-link" href="/Parking/Parking%20Page.html">Forum</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Parking/Parking%20Page.html">Bewerten</a>
+                <a class="nav-link" href="/Parking/Parking%20Page.html">Bewerten</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Parking/Parking%20Page.html">Ranking</a>
+                <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="Parking/Parking%20Page.html">Aktivitäten</a>
+                <a class="nav-link" href="/Parking/Parking%20Page.html">Aktivitäten</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -56,14 +56,14 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-            <img class="d-block img-fluid objectfit" src="image/Htwg.jpg" alt="First slide">
+            <img class="d-block img-fluid objectfit" src="/image/Htwg.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
                 <h1>HTWG Konstanz</h1>
                 <h5>Studieren wo andere Urlaub machen</h5>
             </div>
         </div>
         <div class="carousel-item">
-            <img class="d-block img-fluid objectfit" src="image/Berrys.jpg" alt="Second slide">
+            <img class="d-block img-fluid objectfit" src="/image/Berrys.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Berry's Konstanz</h1>
                 <h5>Create your own story. Wir sind da, um deine Nächte unvergesslich zu machen.</h5>
@@ -85,21 +85,21 @@
     <h3>Was kannst du auf EduShare machen?</h3><br>
     <div class="row">
         <div class="col-sm-4">
-            <img src="image/forum.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
+            <img src="/image/forum.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
             <h4>Forum</h4>
             <div class="col-12">
                 <p>Wenn du Fragen hast kannst du sie hier deinen Kommilitonen stellen.</p>
             </div>
         </div>
         <div class="col-sm-4">
-            <img src="image/basketball.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
+            <img src="/image/basketball.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
             <h4>Aktivitäten</h4>
             <div class="col-12">
                 <p>Hast du Lust auf eine Hochschule die dir deine Freizeitaktivitäten bietet?</p>
             </div>
         </div>
         <div class="col-sm-4">
-            <img src="image/bewertung.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
+            <img src="/image/bewertung.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
             <h4>Bewerten</h4>
             <div class="col-12">
                 <p>Teile deine Erfahrungen mit einem Professor oder einer Vorlesung und bewerte sie!</p>
@@ -124,13 +124,13 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="Impressum/impressum.html">Impressum</a>
+                        <a href="/Impressum/impressum.html">Impressum</a>
                     </li>
                     <li>
                         <a href="mailto:borner.rene@gmail.com">Kontakt</a>
                     </li>
                     <li>
-                        <a href="Rechtliches/rechtliches.html">Rechtliches</a>
+                        <a href="/Rechtliches/rechtliches.html">Rechtliches</a>
                     </li>
                 </ul>
                 <label for="countries"></label><select name="countries" id="countries" style="width:150px;">
