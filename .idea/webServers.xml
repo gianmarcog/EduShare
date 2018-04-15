@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="beb7f5a2-3e37-4479-84af-ec3da0268e77" name="raspberry" url="http://192.168.0.104:8000">
+      <webServer id="beb7f5a2-3e37-4479-84af-ec3da0268e77" name="raspberry" url="http://192.168.0.104">
         <fileTransfer host="192.168.0.104" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
