@@ -45,9 +45,17 @@
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
         </form>
-        <form action="{{ route('login') }}">
-            <button class="btn btn-primary mr-0 ml-2.desktop">Login</button>
-        </form>
+        <?php if (\Auth::check()) { ?>
+            <form action="{{ route('login') }}">
+                <button class="btn btn-primary mr-0 ml-2.desktop">Account</button>
+            </form>
+        <?php } else { ?>
+            <form action="{{ route('login') }}">
+                <button class="btn btn-primary mr-0 ml-2.desktop">Login</button>
+            </form>
+        <?php } ?>
+
+
     </div>
 </nav>
 
