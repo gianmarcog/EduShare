@@ -1,63 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>EduShare</title>
-    <link rel="icon" href="/image/Logosmall.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/css/customcss.css">
+@extends('layouts.app')
 
-</head>
-
-<body>
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="https://edushare.reneborner.de">
-        <img src="/image/EduShare.png" width="70" height="60" alt="">
-
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Übersicht <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Parking/Parking%20Page.html">Forum</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Parking/Parking%20Page.html">Bewerten</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Parking/Parking%20Page.html">Aktivitäten</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
-        </form>
-        <?php if (\Auth::check()) { ?>
-            <form action="{{ route('login') }}">
-                <button class="btn btn-primary mr-0 ml-2.desktop">Account</button>
-            </form>
-        <?php } else { ?>
-            <form action="{{ route('login') }}">
-                <button class="btn btn-primary mr-0 ml-2.desktop">Login</button>
-            </form>
-        <?php } ?>
-
-
-    </div>
-</nav>
+@section('content')
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -161,6 +104,5 @@
         </div>
     </div>
 </footer>
-</body>
+@endsection
 
-</html>
