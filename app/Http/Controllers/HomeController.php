@@ -30,6 +30,9 @@ class HomeController extends Controller
         // show the form
         return View::make('login');
     }
+    public function start(){
+        return view('welcome');
+    }
 
     public function doLogin()
     {

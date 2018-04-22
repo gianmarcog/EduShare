@@ -20,67 +20,70 @@
     <link rel="stylesheet" href="/css/customcss.css">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+<div id="app">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ route('start') }}">
+            <img src="/image/EduShare.png" width="70" height="60" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Übersicht <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Parking/Parking%20Page.html">Forum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Parking/Parking%20Page.html">Bewerten</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Parking/Parking%20Page.html">Aktivitäten</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
+            </form>
+            <?php if (\Auth::check()) { ?>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                   aria-haspopup="true" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                            Logout
+                        </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
+            </li>
+            <?php } else { ?>
+            <form action="{{ route('login') }}">
+                <button class="btn btn-primary ml-2.desktop">Login</button>
+            </form>
+            <?php } ?>
+        </div>
+    </nav>
 
-        @yield('content')
-    </div>
+    @yield('content')
+</div>
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
+<!-- Scripts -->
+<script src="/js/app.js"></script>
 </body>
 </html>
