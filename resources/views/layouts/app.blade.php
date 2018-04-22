@@ -52,11 +52,11 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
             </form>
             <?php if (\Auth::check()) { ?>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+            <button class="btn btn-primary dropdown">
+                <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                    aria-haspopup="true" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
+                </p>
 
                 <ul class="dropdown-menu">
                     <li>
@@ -71,7 +71,7 @@
                         </form>
                     </li>
                 </ul>
-            </li>
+            </button>
             <?php } else { ?>
             <form action="{{ route('login') }}">
                 <button class="btn btn-primary ml-2.desktop">Login</button>
