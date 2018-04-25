@@ -28,3 +28,11 @@ Route::get('/bewerten', function(){
 Route::get('/aktivitäten', function () {
     return view('aktivitäten');
 }) ->name('aktivitäten');
+
+Route::get('/forum', function(){
+    return view('forum');
+}) ->name ('forum');
+
+Route::get('/ranking', function(){
+    return view('ranking');
+}) ->name ('ranking');

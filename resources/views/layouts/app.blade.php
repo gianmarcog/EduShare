@@ -36,13 +36,13 @@
                     <a class="nav-link" href="#">Übersicht <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Parking/Parking%20Page.html">Forum</a>
+                    <a class="nav-link" href="{{route('forum')}}">Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('bewerten')}}">Bewerten</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
+                    <a class="nav-link" href="{{ route('ranking')}}">Ranking</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('aktivitäten') }}">Aktivitäten</a>
