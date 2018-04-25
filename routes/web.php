@@ -36,3 +36,7 @@ Route::get('/forum', function(){
 Route::get('/ranking', function(){
     return view('ranking');
 }) ->name ('ranking');
+
+Route::get('/', function(){
+    return view('welcome');
+}) ->name ('uebersicht');
