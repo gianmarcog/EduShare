@@ -32,20 +32,20 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{route('uebersicht')}}">Übersicht <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link {{ (\Request::route()->getName() == 'uebersicht') ? 'active' : '' }}" href="{{route('uebersicht')}}">Übersicht</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('forum')}}">Forum</a>
+                    <a class="nav-link {{ (\Request::route()->getName() == 'forum') ? 'active' : '' }}" href="{{route('forum')}}">Forum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('bewerten')}}">Bewerten</a>
+                    <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}" href="{{route('bewerten')}}">Bewerten</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('ranking')}}">Ranking</a>
+                    <a class="nav-link {{ (\Request::route()->getName() == 'ranking') ? 'active' : '' }}" href="{{ route('ranking')}}">Ranking</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('aktivitäten') }}">Aktivitäten</a>
+                    <a class="nav-link {{ (\Request::route()->getName() == 'aktivitäten') ? 'active' : '' }}" href="{{ route('aktivitäten') }}">Aktivitäten</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
