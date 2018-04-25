@@ -45,7 +45,7 @@
                     <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Parking/Parking%20Page.html">Aktivitäten</a>
+                    <a class="nav-link" href="{{ route('aktivitäten') }}">Aktivitäten</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -55,7 +55,7 @@
             <button id="accountbutton" class="btn btn-primary dropdown">
                 <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                    aria-haspopup="true" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                    {{ Auth::user()->name }} <sp    an class="caret"></span>
                 </p>
 
                 <ul class="dropdown-menu">

@@ -21,6 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/start', 'HomeController@start')->name('start');
 
-Route::get('aktivitäten', function () {
+Route::get('/aktivitäten', function () {
     return view('aktivitäten');
-});
+}) ->name('aktivitäten');
