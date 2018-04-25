@@ -39,7 +39,7 @@
                     <a class="nav-link" href="/Parking/Parking%20Page.html">Forum</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Parking/Parking%20Page.html">Bewerten</a>
+                    <a class="nav-link" href="{{route('bewerten')}}">Bewerten</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/Parking/Parking%20Page.html">Ranking</a>
