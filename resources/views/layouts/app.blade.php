@@ -52,7 +52,7 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
             </form>
             <?php if (\Auth::check()) { ?>
-            <button class="btn btn-primary dropdown">
+            <button id="accountbutton" class="btn btn-primary dropdown">
                 <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                    aria-haspopup="true" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
