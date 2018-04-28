@@ -9,13 +9,14 @@ class hochschulenController extends Controller
 {
     public function index() {
         $hochschule = hochschulen::all();
-        return view('aktivitaeten')->with('hs',$hochschule);
+        return view('ranking')->with('hs',$hochschule);
     }
 
     public function store(Request $request) {
         $hochschule = new hochschulen();
         $hochschule->name = $request->name;
         $hochschule->standort = $request->standort;
+        $hochschule->ranking = $request->ranking;
         $hochschule->save();
 
         // shorter: $currency = Currency::create($request->all());

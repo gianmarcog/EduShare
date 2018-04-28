@@ -21,15 +21,15 @@ Route::get('/bewerten', function () {
     return view('bewerten');
 })->name('bewerten');
 
-Route::get('/aktivitaeten', 'hochschulenController@index')->name('aktivitaeten');
+Route::get('/aktivitaeten', function(){
+    return view('aktivitaeten');
+})->name('aktivitaeten');
 
 Route::get('/forum', function () {
     return view('forum');
 })->name('forum');
 
-Route::get('/ranking', function () {
-    return view('ranking');
-})->name('ranking');
+Route::get('/ranking', 'hochschulenController@index')->name('ranking');
 
 Route::get('/', function () {
     return view('welcome');
