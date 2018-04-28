@@ -26,9 +26,6 @@
 </div>
 <!-- Scripts -->
 <script src="/js/app.js"></script>
-
-<footer @include('inc.footer')> </footer>
-
-
+<footer @include('inc.footer')></footer>
 </body>
 </html>

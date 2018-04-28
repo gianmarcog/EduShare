@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Input;
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
