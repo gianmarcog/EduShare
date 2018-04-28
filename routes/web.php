@@ -21,9 +21,9 @@ Route::get('/bewerten', function(){
     return view('bewerten');
 })->name('bewerten');
 
-Route::get('/aktivitäten', function () {
-    return view('aktivitäten');
-}) ->name('aktivitäten');
+Route::get('/aktivitaeten', function () {
+    return view('aktivitaeten');
+}) ->name('aktivitaeten');
 
 Route::get('/forum', function(){
     return view('forum');

@@ -22,7 +22,7 @@
                 <a class="nav-link {{ (\Request::route()->getName() == 'ranking') ? 'active' : '' }}" href="{{ route('ranking')}}">Ranking</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ (\Request::route()->getName() == 'aktivitäten') ? 'active' : '' }}" href="{{ route('aktivitäten') }}">Aktivitäten</a>
+                <a class="nav-link {{ (\Request::route()->getName() == 'aktivitaeten') ? 'active' : '' }}" href="{{ route('aktivitaeten') }}">Aktivitäten</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

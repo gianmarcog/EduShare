@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+//artisan migrate
 class CreateHochschulen extends Migration
 {
     /**
@@ -15,6 +15,9 @@ class CreateHochschulen extends Migration
     {
         Schema::create('hochschulen', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('standort');
+            $table->integer('ranking');
             $table->timestamps();
         });
     }
