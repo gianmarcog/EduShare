@@ -17,22 +17,20 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/start', 'HomeController@start')->name('start');
 
-Route::get('/bewerten', function(){
+Route::get('/bewerten', function () {
     return view('bewerten');
 })->name('bewerten');
 
-Route::get('/aktivitaeten', function () {
-    return view('aktivitaeten');
-}) ->name('aktivitaeten');
+Route::get('/aktivitaeten', 'hochschulenController@index')->name('aktivitaeten');
 
-Route::get('/forum', function(){
+Route::get('/forum', function () {
     return view('forum');
-}) ->name ('forum');
+})->name('forum');
 
-Route::get('/ranking', function(){
+Route::get('/ranking', function () {
     return view('ranking');
-}) ->name ('ranking');
+})->name('ranking');
 
-Route::get('/', function(){
+Route::get('/', function () {
     return view('welcome');
-}) ->name ('uebersicht');
+})->name('uebersicht');

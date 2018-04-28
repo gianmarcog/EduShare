@@ -9,13 +9,13 @@ class hochschulenController extends Controller
 {
     public function index() {
         $hochschule = hochschulen::all();
-        return view('currencyList')->with('cs',$hochschule);
+        return view('aktivitaeten')->with('hs',$hochschule);
     }
 
     public function store(Request $request) {
         $hochschule = new hochschulen();
-        $hochschule->currency_iso = $request->currency_iso;
-        $hochschule->eur_fxrate = $request->eur_fxrate;
+        $hochschule->name = $request->name;
+        $hochschule->standort = $request->standort;
         $hochschule->save();
 
         // shorter: $currency = Currency::create($request->all());
@@ -24,7 +24,7 @@ class hochschulenController extends Controller
 
     public function show(Request $request,$id) {
         $hochschule = hochschulen::find($id);
-        return view('currencyView')->with('c',$hochschule);
+        return view('aktivitaeten')->with('h',$hochschule);
     }
 
     public function destroy(Request $request,$id) {
