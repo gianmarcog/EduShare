@@ -36,3 +36,6 @@ Route::get('/ranking', 'hochschulenController@index')->name('ranking');
 Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
+
+Route::get('search', 'hochschulenController@search')->name('search');
+

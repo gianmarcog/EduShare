@@ -33,4 +33,11 @@ class hochschulenController extends Controller
         $hochschule->delete();
         return $this->index();
     }
+
+    public function search(Request $request){
+        $query=$request->input('search');
+        $results = hochschulen::where('name', 'LIKE', '%'.$query.'%')->get();
+        return view('searchresults')->with('hs',$results);
+
+    }
 }

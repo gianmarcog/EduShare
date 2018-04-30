@@ -30,8 +30,8 @@
                    href="{{ route('aktivitaeten') }}">Aktivitäten</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Suchen" aria-label="Search">
+        <form class="form-inline my-2 my-lg-0" action="{{url('search')}}">
+            <input class="form-control mr-sm-2" type="search" placeholder="Suchen" name="search">
         </form>
         <?php if (\Auth::check()) { ?>
         <button id="accountbutton" class="btn btn-primary dropdown">
