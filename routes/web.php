@@ -31,11 +31,11 @@ Route::get('/forum', function () {
     return view('forum');
 })->name('forum');
 
-Route::get('/ranking', 'hochschulenController@index')->name('ranking');
+Route::get('/ranking', 'dbController@index')->name('ranking');
 
 Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
 
-Route::get('search', 'hochschulenController@search')->name('search');
+Route::get('search', 'dbController@search')->name('search');
 
