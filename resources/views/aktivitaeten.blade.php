@@ -15,7 +15,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($hs as $h)
+                    @foreach ($a as $h)
                         <tr>
                             <td> {{  $h->name }} </td>
                             <td> {{  $h->standort }}</td>

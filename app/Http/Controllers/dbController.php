@@ -9,7 +9,11 @@ use Illuminate\Http\Request;
 
 class dbController extends Controller
 {
-    public function index() {
+    public function aktivitaeten(){
+        $aktivitaeten = aktivitaeten::all();
+        return view('ranking')->with('a',$aktivitaeten);
+    }
+    public function ranking() {
         $hochschule = hochschulen::all();
         $aktivitaeten = aktivitaeten::all();
         $vorlesungen = vorlesungen::all();

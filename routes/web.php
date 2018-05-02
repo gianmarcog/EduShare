@@ -31,7 +31,7 @@ Route::get('/forum', function () {
     return view('forum');
 })->name('forum');
 
-Route::get('/ranking', 'dbController@index')->name('ranking');
+Route::get('/ranking', 'dbController@ranking')->name('ranking');
 
 Route::get('/', function () {
     return view('welcome');
