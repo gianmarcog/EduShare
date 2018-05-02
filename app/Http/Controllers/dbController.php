@@ -44,9 +44,13 @@ class dbController extends Controller
 
     public function search(Request $request){
         $query=$request->input('search');
-        $results = hochschulen::where('name', 'LIKE', '%'.$query.'%')
+        $hochschule = hochschulen::where('name', 'LIKE', '%'.$query.'%')
             ->orwhere('standort', 'LIKE', '%'.$query.'%')->get();
-        return view('searchresults')->with('hs',$results);
+        $aktivitaeten = aktivitaeten::where('name', 'LIKE', '%'.$query.'%')
+            ->orwhere('standort', 'LIKE', '%'.$query.'%')->get();
+        $vorlesungen = vorlesungen::where('name', 'LIKE', '%'.$query.'%')
+            ->orwhere('professor', 'LIKE', '%'.$query.'%')->get();
+        return view('searchresults')->with('hs',$hochschule)->with('a',$aktivitaeten)->with('v',$vorlesungen);
 
     }
 }
