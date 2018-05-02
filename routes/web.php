@@ -23,9 +23,8 @@ Route::get('/bewerten', function () {
     return view('bewerten');
 })->name('bewerten');
 
-Route::get('/aktivitaeten', function(){
-    return view('aktivitaeten');
-})->name('aktivitaeten');
+Route::get('/aktivitaeten', 'dbController@aktivitaeten')->name('aktivitaeten');
+
 
 Route::get('/forum', function () {
     return view('forum');

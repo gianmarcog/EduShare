@@ -11,7 +11,7 @@ class dbController extends Controller
 {
     public function aktivitaeten(){
         $aktivitaeten = aktivitaeten::all();
-        return view('ranking')->with('a',$aktivitaeten);
+        return view('aktivitaeten')->with('a',$aktivitaeten);
     }
     public function ranking() {
         $hochschule = hochschulen::all();
