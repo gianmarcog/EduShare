@@ -36,7 +36,8 @@ class hochschulenController extends Controller
 
     public function search(Request $request){
         $query=$request->input('search');
-        $results = hochschulen::where('name', 'LIKE', '%'.$query.'%')->get();
+        $results = hochschulen::where('name', 'LIKE', '%'.$query.'%')
+            ->orwhere('standort', 'LIKE', '%'.$query.'%')->get();
         return view('searchresults')->with('hs',$results);
 
     }
