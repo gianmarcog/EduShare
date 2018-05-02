@@ -43,9 +43,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($hs as $h)
+                    @foreach ($a as $h)
                         <tr>
-                            <td> {{  $h->aktivitaet }} </td>
+                            <td> {{  $h->name }} </td>
                             <td> {{  $h->standort }}</td>
                             <td> {{  $h->ranking }}</td>
                         </tr>
@@ -70,7 +70,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    @foreach ($hs as $h)
+                    @foreach ($v as $h)
                         <tr>
                             <td> {{  $h->name }} </td>
                             <td> {{  $h->professor }}</td>

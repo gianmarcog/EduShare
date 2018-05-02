@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\aktivitaeten;
 use App\hochschulen;
+use App\vorlesungen;
 use Illuminate\Http\Request;
 
 class dbController extends Controller
 {
     public function index() {
         $hochschule = hochschulen::all();
-        return view('ranking')->with('hs',$hochschule);
+        $aktivitaeten = aktivitaeten::all();
+        $vorlesungen = vorlesungen::all();
+        return view('ranking')->with('hs',$hochschule)->with('a',$aktivitaeten)->with('v',$vorlesungen);
     }
 
     public function store(Request $request) {
