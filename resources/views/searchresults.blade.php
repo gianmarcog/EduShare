@@ -9,17 +9,17 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Standort</th>
-                        <th>Ranking</th>
+                        <th style="width: 33%">Name</th>
+                        <th style="width: 33%">Standort</th>
+                        <th style="width: 33%">Ranking</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($hs as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->standort }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->standort }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -37,17 +37,17 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Aktivität</th>
-                        <th>Standort</th>
-                        <th>Ranking</th>
+                        <th style="width: 33%">Aktivität</th>
+                        <th style="width: 33%">Standort</th>
+                        <th style="width: 33%">Ranking</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($a as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->standort }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->standort }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -64,17 +64,17 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Professor</th>
-                        <th>Ranking</th>
+                        <th style="width: 33%">Name</th>
+                        <th style="width: 33%">Professor</th>
+                        <th style="width: 33%">Ranking</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($v as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->professor }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->professor }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>

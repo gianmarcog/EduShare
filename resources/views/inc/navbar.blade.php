@@ -15,11 +15,23 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'forum') ? 'active' : '' }}"
-                   href="{{route('forum')}}">Forum</a>
+                   href=
+                   <?php if (\Auth::check()) { ?>
+                           "{{route('forum')}}">
+                    <?php } else { ?>
+                    "#" onClick="alert('Du musst dich anmelden um in das Forum zu gehen!')">
+                    <?php } ?>
+                   Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}"
-                   href="{{route('bewerten')}}">Bewerten</a>
+                   href=
+                <?php if (\Auth::check()) { ?>
+                   "{{route('bewerten')}}">
+                <?php } else { ?>
+                    "#" onClick="alert('Du musst dich anmelden um Bewertungen erstellen zu können!')">
+                <?php } ?>
+                    Bewerten</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'ranking') ? 'active' : '' }}"

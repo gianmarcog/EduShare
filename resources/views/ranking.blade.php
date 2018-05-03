@@ -17,9 +17,9 @@
                     <tbody>
                     @foreach ($hs as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->standort }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->standort }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -45,9 +45,9 @@
                     <tbody>
                     @foreach ($a as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->standort }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->standort }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -72,9 +72,9 @@
                     <tbody>
                     @foreach ($v as $h)
                         <tr>
-                            <td> {{  $h->name }} </td>
-                            <td> {{  $h->professor }}</td>
-                            <td> {{  $h->ranking }}</td>
+                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->professor }}</td>
+                            <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>
                     @endforeach
                     </tbody>
