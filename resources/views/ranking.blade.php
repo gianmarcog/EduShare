@@ -12,14 +12,21 @@
                         <th>Name</th>
                         <th>Standort</th>
                         <th>Ranking</th>
+                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
+                    <script src="{{ asset('/js/url.js') }}"></script>
                     @foreach ($hs as $h)
                         <tr>
                             <td style="width: 33%"> {{  $h->name }} </td>
                             <td style="width: 33%"> {{  $h->standort }}</td>
                             <td style="width: 33%"> {{  $h->ranking }}</td>
+                            <td>
+                                <button class="btn btn-primary btn-url" href="{{ $h->url }}" type="button">
+                                    Open
+                                </button>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -72,7 +79,7 @@
                     <tbody>
                     @foreach ($v as $h)
                         <tr>
-                            <td style="width: 33%"> {{  $h->name }} </td>
+                            <td style="width: 33%"> {{  $h->name }}</td>
                             <td style="width: 33%"> {{  $h->professor }}</td>
                             <td style="width: 33%"> {{  $h->ranking }}</td>
                         </tr>

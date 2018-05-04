@@ -21,14 +21,14 @@ Route::get('/start', 'HomeController@start')->name('start');
 
 Route::get('/bewerten', function () {
     return view('bewerten');
-})->name('bewerten');
+})->name('bewerten')->middleware('auth');
 
 Route::get('/aktivitaeten', 'dbController@aktivitaeten')->name('aktivitaeten');
 
 
 Route::get('/forum', function () {
     return view('forum');
-})->name('forum');
+})->name('forum')->middleware('auth');
 
 Route::get('/ranking', 'dbController@ranking')->name('ranking');
 
