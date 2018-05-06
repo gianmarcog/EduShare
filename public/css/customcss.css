@@ -92,4 +92,12 @@ h5 {
     height: 37px !important;
 }
 
+#column {
+    width: 30%;
+}
+
+#detail{
+    width: 10%;
+}
+
 

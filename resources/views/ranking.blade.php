@@ -9,23 +9,22 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Standort</th>
-                        <th>Ranking</th>
-                        <th>&nbsp;</th>
+                        <th id="column">Name</th>
+                        <th id="column">Standort</th>
+                        <th id="column">Ranking</th>
+                        <th id="column">&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <script src="{{ asset('/js/url.js') }}"></script>
                     @foreach ($hs as $h)
                         <tr>
-                            <td style="width: 33%"> {{  $h->name }} </td>
-                            <td style="width: 33%"> {{  $h->standort }}</td>
-                            <td style="width: 33%"> {{  $h->ranking }}</td>
+                            <td id="column"> {{  $h->name }} </td>
+                            <td id="column"> {{  $h->standort }}</td>
+                            <td id="column"> {{  $h->ranking }}</td>
                             <td>
-                                <button class="btn btn-primary btn-url" href="{{ $h->url }}" type="button">
-                                    Open
-                                </button>
+                                <form action="/hochschulen/{{ $h->id }}">
+                                    <button type="submit" class="btn btn-primary btn-url">Informationen</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -44,17 +43,23 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Aktivität</th>
-                        <th>Standort</th>
-                        <th>Ranking</th>
+                        <th id="column">Aktivität</th>
+                        <th id="column">Standort</th>
+                        <th id="column">Ranking</th>
+                        <th id="detail">&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($a as $h)
                         <tr>
-                            <td style="width: 33%"> {{  $h->name }} </td>
-                            <td style="width: 33%"> {{  $h->standort }}</td>
-                            <td style="width: 33%"> {{  $h->ranking }}</td>
+                            <td id="column"> {{  $h->name }} </td>
+                            <td id="column"> {{  $h->standort }}</td>
+                            <td id="column"> {{  $h->ranking }}</td>
+                            <td>
+                                <form action="/aktivitaeten/{{ $h->id }}">
+                                    <button type="submit" class="btn btn-primary btn-url">Informationen</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -71,17 +76,23 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Professor</th>
-                        <th>Ranking</th>
+                        <th id="column">Name</th>
+                        <th id="column">Professor</th>
+                        <th id="column">Ranking</th>
+                        <th id="detail">&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach ($v as $h)
                         <tr>
-                            <td style="width: 33%"> {{  $h->name }}</td>
-                            <td style="width: 33%"> {{  $h->professor }}</td>
-                            <td style="width: 33%"> {{  $h->ranking }}</td>
+                            <td id="column"> {{  $h->name }}</td>
+                            <td id="column"> {{  $h->professor }}</td>
+                            <td id="column"> {{  $h->ranking }}</td>
+                            <td>
+                                <form action="/vorlesungen/{{ $h->id }}">
+                                    <button type="submit" class="btn btn-primary btn-url">Informationen</button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

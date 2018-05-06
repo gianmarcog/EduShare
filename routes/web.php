@@ -38,3 +38,15 @@ Route::get('/', function () {
 
 Route::get('search', 'dbController@search')->name('search');
 
+Route::get('/hochschulen/{id}',function (){
+    return view('hochschule');
+});
+
+Route::get('/aktivitaeten/{id}',function (){
+    return view('aktivitaet');
+});
+
+Route::get('/vorlesungen/{id}',function (){
+    return view('vorlesung');
+});
+
