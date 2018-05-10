@@ -13,6 +13,10 @@ class dbController extends Controller
         $aktivitaeten = aktivitaeten::all();
         return view('aktivitaeten')->with('a',$aktivitaeten);
     }
+    public function hochschulen(){
+        $hochschulen = hochschulen::all();
+        return view('hochschulen')->with('hs',$hochschulen);
+    }
     public function ranking() {
         $hochschule = hochschulen::all();
         $aktivitaeten = aktivitaeten::all();
@@ -52,5 +56,15 @@ class dbController extends Controller
             ->orwhere('professor', 'LIKE', '%'.$query.'%')->get();
         return view('searchresults')->with('hs',$hochschule)->with('a',$aktivitaeten)->with('v',$vorlesungen);
 
+    }
+
+    public function informationenHs(Request $request, $id){
+        $hochschule = hochschulen::where('id','=',$id)->get();
+        return view('hochschule')->with('hs',$hochschule);
+    }
+
+    public function informationenAk(Request $request, $id){
+        $aktivitaet = aktivitaeten::where('id','=',$id)->get();
+        return view('aktivitaet')->with('a',$aktivitaet);
     }
 }

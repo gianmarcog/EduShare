@@ -21,16 +21,16 @@
                     <?php } else { ?>
                     "#" onClick="alert('Du musst dich anmelden um in das Forum zu gehen!')">
                     <?php } ?>
-                   Forum</a>
+                    Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}"
                    href=
-                <?php if (\Auth::check()) { ?>
-                   "{{route('bewerten')}}">
-                <?php } else { ?>
+                   <?php if (\Auth::check()) { ?>
+                           "{{route('bewerten')}}">
+                    <?php } else { ?>
                     "#" onClick="alert('Du musst dich anmelden um Bewertungen erstellen zu können!')">
-                <?php } ?>
+                    <?php } ?>
                     Bewerten</a>
             </li>
             <li class="nav-item">
@@ -38,8 +38,18 @@
                    href="{{ route('ranking')}}">Ranking</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ (\Request::route()->getName() == 'aktivitaeten') ? 'active' : '' }}"
-                   href="{{ route('aktivitaeten') }}">Aktivitäten</a>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kategorien
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="nav-link {{ (\Request::route()->getName() == 'aktivitaeten') ? 'active' : '' }}"
+                           href="{{ route('aktivitaeten') }}">Aktivitäten</a>
+                        <a class="nav-link {{ (\Request::route()->getName() == 'hochschulen') ? 'active' : '' }}"
+                           href="{{ route('hochschulen') }}">Hochschulen</a>
+                    </div>
+                </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" action="{{url('search')}}">

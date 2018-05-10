@@ -11,8 +11,6 @@
 |
 */
 
-use Illuminate\Support\Facades\Input;
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,6 +22,8 @@ Route::get('/bewerten', function () {
 })->name('bewerten')->middleware('auth');
 
 Route::get('/aktivitaeten', 'dbController@aktivitaeten')->name('aktivitaeten');
+
+Route::get('/hochschulen', 'dbController@hochschulen')->name('hochschulen');
 
 
 Route::get('/forum', function () {
@@ -38,15 +38,12 @@ Route::get('/', function () {
 
 Route::get('search', 'dbController@search')->name('search');
 
-Route::get('/hochschulen/{id}',function (){
-    return view('hochschule');
-});
 
-Route::get('/aktivitaeten/{id}',function (){
-    return view('aktivitaet');
-});
+Route::get('/hochschule/{id}', 'dbController@informationenHs');
 
-Route::get('/vorlesungen/{id}',function (){
+Route::get('/aktivitaet/{id}', 'dbController@informationenAk');
+
+Route::get('/vorlesung/{id}', function () {
     return view('vorlesung');
 });
 

@@ -22,7 +22,7 @@
                             <td id="column"> {{  $h->standort }}</td>
                             <td id="column"> {{  $h->ranking }}</td>
                             <td>
-                                <form action="/hochschulen/{{ $h->id }}">
+                                <form action="/hochschule/{{ $h->id }}">
                                     <button type="submit" class="btn btn-primary btn-url">Informationen</button>
                                 </form>
                             </td>
@@ -56,7 +56,7 @@
                             <td id="column"> {{  $h->standort }}</td>
                             <td id="column"> {{  $h->ranking }}</td>
                             <td>
-                                <form action="/aktivitaeten/{{ $h->id }}">
+                                <form action="/aktivitaet/{{ $h->id }}">
                                     <button type="submit" class="btn btn-primary btn-url">Informationen</button>
                                 </form>
                             </td>
@@ -89,7 +89,7 @@
                             <td id="column"> {{  $h->professor }}</td>
                             <td id="column"> {{  $h->ranking }}</td>
                             <td>
-                                <form action="/vorlesungen/{{ $h->id }}">
+                                <form action="/vorlesung/{{ $h->id }}">
                                     <button type="submit" class="btn btn-primary btn-url">Informationen</button>
                                 </form>
                             </td>
