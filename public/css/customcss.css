@@ -88,6 +88,10 @@ h5 {
     box-shadow: none !important;
 }
 
+.top-buffer {
+    margin-top: 30px;
+}
+
 #accountbutton {
     height: 37px !important;
 }
@@ -96,8 +100,12 @@ h5 {
     width: 30%;
 }
 
-#detail{
+#detail {
     width: 10%;
 }
 
-
+.progress-bar {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}

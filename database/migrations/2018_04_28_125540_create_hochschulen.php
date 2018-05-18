@@ -19,6 +19,7 @@ class CreateHochschulen extends Migration
             $table->string('standort');
             $table->integer('ranking');
             $table->string('url');
+            $table->string('text');
             $table->timestamps();
         });
     }
