@@ -9,6 +9,8 @@
                 <h1>{{$h->name}}</h1>
                     <h4>Standort: {{$h->standort}}</h4>
                     <h4>Ranking: {{$h -> ranking}}</h4>
+                    <div class="ldBar" data-value="{{$h -> ranking}}" data-preset="fan"></div>
+
                 @endforeach
 
             </div>
