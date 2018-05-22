@@ -15,6 +15,7 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -167,6 +168,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Ghanem\Rating\RatingServiceProvider::class,
 
         /*
          * Application Service Providers...
