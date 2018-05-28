@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    @include('inc.navbar')
     <title>EduShare</title>
     <link rel="icon" href="/image/Logosmall.png">
     <meta charset="utf-8">
@@ -20,18 +19,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/customcss.css">
     <link rel="stylesheet" href="/css/loading-bar.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <link rel="stylesheet" type="text/css"
+          href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script src="/js/cookies.js"></script>
     <script src="/js/loading-bar.js"></script>
 
 </head>
 <body>
+@include('inc.navbar')
 <div id="app">
     @yield('content')
 </div>
+@include('inc.footer')
+
 <!-- Scripts -->
 <script src="/js/app.js"></script>
-<footer @include('inc.footer')></footer>
 </body>
 </html>
