@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{{ route('start') }}">
+    <a class="navbar-brand" href="{{ route('uebersicht') }}">
         <img src="/image/EduShare.png" width="70" height="60" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -15,23 +15,11 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'forum') ? 'active' : '' }}"
-                   href=
-                   <?php if (\Auth::check()) { ?>
-                           "{{route('forum')}}">
-                    <?php } else { ?>
-                    "#" onClick="alert('Du musst dich anmelden um in das Forum zu gehen!')">
-                    <?php } ?>
-                    Forum</a>
+                   href="{{route('forum')}}">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}"
-                   href=
-                   <?php if (\Auth::check()) { ?>
-                           "{{route('bewerten')}}">
-                    <?php } else { ?>
-                    "#" onClick="alert('Du musst dich anmelden um Bewertungen erstellen zu können!')">
-                    <?php } ?>
-                    Bewerten</a>
+                   href="{{route('bewerten')}}">Bewerten</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'ranking') ? 'active' : '' }}"
@@ -80,6 +68,6 @@
         <form action="{{ route('login') }}">
             <button class="btn btn-primary ml-2.desktop">Login</button>
         </form>
-        <?php } ?>
+    <?php } ?>
     </div>
 </nav>

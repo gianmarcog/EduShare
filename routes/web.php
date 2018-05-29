@@ -15,8 +15,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/start', 'HomeController@start')->name('start');
-
 Route::get('/bewerten', function () {
     return view('bewerten');
 })->name('bewerten')->middleware('auth');
