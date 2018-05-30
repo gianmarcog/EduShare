@@ -40,11 +40,13 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="{{url('search')}}">
-            <input class="form-control mr-sm-2" type="search" placeholder="Suchen" name="search">
+
+        <form action="{{ route('search') }}">
+            <button class="btn btn-primary mr-2 mb-1">Suche</button>
         </form>
+
         <?php if (\Auth::check()) { ?>
-        <button id="accountbutton" class="btn btn-primary dropdown">
+        <button id="accountbutton" class="btn btn-primary dropdown mb-1">
             <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                aria-haspopup="true" v-pre>
                 {{ Auth::user()->name }} <span class="caret"></span>
@@ -66,7 +68,7 @@
         </button>
         <?php } else { ?>
         <form action="{{ route('login') }}">
-            <button class="btn btn-primary ml-2.desktop">Login</button>
+            <button class="btn btn-primary ml-2.desktop mb-1">Login</button>
         </form>
     <?php } ?>
     </div>

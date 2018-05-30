@@ -18,4 +18,5 @@ window.addEventListener("load", function () {
             "link": "Details"
         }
     })
+
 });

@@ -34,7 +34,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
 
-Route::get('search', 'dbController@search')->name('search');
+
 
 
 Route::get('/hochschule/{id}', 'dbController@informationenHs');
@@ -45,3 +45,7 @@ Route::get('/vorlesung/{id}', function () {
     return view('vorlesung');
 });
 
+Route::post('/live', 'searchController@livesearch')->name('live');
+Route::get('/search', function () {
+    return view('searchresults');
+})->name('search');
