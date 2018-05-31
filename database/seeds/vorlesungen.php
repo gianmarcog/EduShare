@@ -11,7 +11,7 @@ class vorlesungen extends Seeder
      */
     public function run()
     {
-        DB::insert("INSERT into vorlesungen values (1,'Betriebssysteme','Müller Rainer',0, NOW(),NOW())");
-        DB::insert("INSERT into vorlesungen values (2,'Rechner&Kommunikationssysteme','Schnell Ralph',80, NOW(),NOW())");
+        DB::insert("INSERT into vorlesungen values (1,'Betriebssysteme','Müller Rainer',0, 1, NOW(),NOW())");
+        DB::insert("INSERT into vorlesungen values (2,'Rechner und Kommunikationssysteme','Schnell Ralph',80,1, NOW(),NOW())");
     }
 }

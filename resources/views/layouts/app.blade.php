@@ -34,7 +34,7 @@
 <script src="/js/app.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script src="/js/cookies.js"></script>
-<script src="/js/loading-bar.js"></script>f
+<script src="/js/loading-bar.js"></script>
 <script src="/js/liveSearch.js"></script>
 </body>
 </html>

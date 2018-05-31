@@ -18,6 +18,7 @@ class CreateVorlesungen extends Migration
             $table->string('name');
             $table->string('professor');
             $table->integer('ranking');
+            $table->integer('hid');
             $table->timestamps();
         });
     }

@@ -21,8 +21,9 @@ class searchController
         $vorlesungen = vorlesungen::where('name', 'LIKE', '%' . $query . '%')
             ->orwhere('professor', 'LIKE', '%' . $query . '%')->get();
 
-        if ($hochschulen) {
-            $html = '<div class="container">
+        $html = '';
+        if (count($hochschulen) !== 0) {
+            $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
                 <p></p>
@@ -56,7 +57,9 @@ class searchController
         </div>
     </div>';
         }
-        $html .= '<div class="container">
+
+        if (count($aktivitaeten) !== 0) {
+            $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
                 <p></p>
@@ -71,8 +74,8 @@ class searchController
                     </tr>
                     </thead>
                     <tbody>';
-        foreach ($aktivitaeten as $aktivitaet) {
-            $content = '<tr>
+            foreach ($aktivitaeten as $aktivitaet) {
+                $content = '<tr>
                             <td id="column">' . $aktivitaet->name . '</td>
                             <td id="column">' . $aktivitaet->standort . '</td>
                             <td id="column">' . $aktivitaet->ranking . '</td>
@@ -82,14 +85,17 @@ class searchController
                                 </form>
                             </td>
                         </tr>';
-            $html .= $content;
-        }
-        $html .= '</tbody>
+                $html .= $content;
+            }
+            $html .= '</tbody>
                 </table>
             </div>
         </div>
     </div>';
-        $html .= '<div class="container">
+        }
+
+        if (count($vorlesungen) !== 0) {
+            $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
                 <p></p>
@@ -104,24 +110,28 @@ class searchController
                     </tr>
                     </thead>
                     <tbody>';
-        foreach ($vorlesungen as $vorlesung) {
-            $content = '<tr>
+            foreach ($vorlesungen as $vorlesung) {
+                $content = '<tr>
                             <td id="column">' . $vorlesung->name . '</td>
-                            <td id="column">' . $vorlesung->standort . '</td>
+                            <td id="column">' . $vorlesung->professor . '</td>
                             <td id="column">' . $vorlesung->ranking . '</td>
                             <td>
-                                <form action="/hochschule/' . $vorlesung->id . '">
-                                    <button type="submit" class="btn btn-primary btn-url">Informationen</button>
+                                <form action="/hochschule/' . $vorlesung->hid . '">
+                                    <button type="submit" class="btn btn-primary btn-url">Hochschule</button>
                                 </form>
                             </td>
                         </tr>';
-            $html .= $content;
-        }
-        $html .= '</tbody>
+                $html .= $content;
+            }
+            $html .= '</tbody>
                 </table>
             </div>
         </div>
     </div>';
+        }
+        if(count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0){
+            $html .= '<h4 class="col-4 mx-auto">Keine Ergebnisse gefunden!</h4>';
+        }
         return $html;
     }
 }

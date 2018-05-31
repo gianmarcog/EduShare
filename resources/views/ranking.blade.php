@@ -89,8 +89,8 @@
                             <td id="column"> {{  $h->professor }}</td>
                             <td id="column"> {{  $h->ranking }}</td>
                             <td>
-                                <form action="/vorlesung/{{ $h->id }}">
-                                    <button type="submit" class="btn btn-primary btn-url">Informationen</button>
+                                <form action="/hochschule/{{ $h->hid }}">
+                                    <button type="submit" class="btn btn-primary btn-url">Hochschule</button>
                                 </form>
                             </td>
                         </tr>
