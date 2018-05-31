@@ -45,31 +45,34 @@
             <button class="btn btn-primary mr-2 mb-1">Suche</button>
         </form>
 
-        <?php if (\Auth::check()) { ?>
-        <button id="accountbutton" class="btn btn-primary dropdown mb-1">
-            <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
-               aria-haspopup="true" v-pre>
-                {{ Auth::user()->name }} <span class="caret"></span>
-            </p>
+        @if (Auth::check())
+            <button id="accountbutton" class="btn btn-primary dropdown mb-1">
+                <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
+                   aria-haspopup="true" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </p>
 
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                        Logout
-                    </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{route('account')}}" class="ml-2">Account</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" class="ml-2">
+                            Logout
+                        </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                </li>
-            </ul>
-        </button>
-        <?php } else { ?>
-        <form action="{{ route('login') }}">
-            <button class="btn btn-primary ml-2.desktop mb-1">Login</button>
-        </form>
-    <?php } ?>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
+            </button>
+        @else
+            <form action="{{ route('login') }}">
+                <button class="btn btn-primary ml-2.desktop mb-1">Login</button>
+            </form>
+        @endif
     </div>
 </nav>

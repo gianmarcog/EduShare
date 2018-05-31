@@ -13,7 +13,9 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/account', 'UserController@index')->name('account');
+
+Route::post('/account', 'UserController@update_avatar');
 
 Route::get('/bewerten', function () {
     return view('bewerten');
@@ -33,9 +35,6 @@ Route::get('/ranking', 'dbController@ranking')->name('ranking');
 Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
-
-
-
 
 Route::get('/hochschule/{id}', 'dbController@informationenHs');
 
