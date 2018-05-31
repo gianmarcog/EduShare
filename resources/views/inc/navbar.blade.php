@@ -46,7 +46,7 @@
         </form>
 
         @if (Auth::check())
-            <button id="accountbutton" class="btn btn-primary dropdown mb-1">
+            <button id="accountbutton" class="btn btn-primary dropdown mb-1 mr-2">
                 <p href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"
                    aria-haspopup="true" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -69,6 +69,8 @@
                     </li>
                 </ul>
             </button>
+            <img src="/image/ProfilePics/{{Auth::user()->avatar}}"
+                 style="width: 40px; height: 40px; border-radius: 50%">
         @else
             <form action="{{ route('login') }}">
                 <button class="btn btn-primary ml-2.desktop mb-1">Login</button>
