@@ -10,7 +10,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Intervention\Image\Image;
+//use Intervention\Image\Image;
+use Intervention\Image\Facades\Image;
 
 class UserController
 {
@@ -19,7 +20,7 @@ class UserController
         return view('account');
     }
 
-    public function public_avatar(Request $request){
+    public function update_avatar(Request $request){
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
             $filename=time() . '.' . $avatar->getClientOriginalExtension();

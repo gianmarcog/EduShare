@@ -24,7 +24,7 @@
                      style="width: 150px; height: 150px; border-radius: 50%">
             </div>
             <div class="col-md-2 mx-auto">
-                <form enctype="multipart/form-data" action="/home" method="post">
+                <form enctype="multipart/form-data" action="/account" method="post">
                     <label>Neues Profil Bild</label>
                     <input type="file" name="avatar">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
