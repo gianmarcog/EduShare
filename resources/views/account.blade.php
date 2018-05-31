@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-md-2 mx-auto">
-                <img src="/image/{{Auth::user()->avatar}}"
+                <img src="/image/ProfilePics/{{Auth::user()->avatar}}"
                      style="width: 150px; height: 150px; border-radius: 50%">
             </div>
             <div class="col-md-2 mx-auto">
