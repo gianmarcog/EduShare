@@ -57,7 +57,8 @@ class dbController extends Controller
     public function informationenHs(Request $request, $id)
     {
         $hochschule = hochschulen::where('id', '=', $id)->get();
-        return view('hochschule')->with('hs', $hochschule);
+        $vorlesungen = vorlesungen::where('hid','=',$id)->get();
+        return view('hochschule')->with('hs', $hochschule)->with('vs',$vorlesungen);
     }
 
     public function informationenAk(Request $request, $id)
