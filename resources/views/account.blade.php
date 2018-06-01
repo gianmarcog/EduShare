@@ -16,6 +16,7 @@
 
                     <p class="pt-4">Du bist angemeldet als {{ Auth::user()->name }}</p>
                     <p>Deine Mail ist {{ Auth::user()->email }}</p>
+                    <p>Deine Hochschule ist {{ Auth::user()->hochschule }}</p>
                     <p>Deinen Account gibt es seit {{ Auth::user()->created_at }}</p>
                 </div>
             </div>

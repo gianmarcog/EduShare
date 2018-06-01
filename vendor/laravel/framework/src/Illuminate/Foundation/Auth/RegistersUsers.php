@@ -5,6 +5,7 @@ namespace Illuminate\Foundation\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Registered;
+use App\hochschulen;
 
 trait RegistersUsers
 {
@@ -17,7 +18,8 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        $hochschulen = hochschulen::all();
+        return view('auth.register')->with('hs', $hochschulen);
     }
 
     /**

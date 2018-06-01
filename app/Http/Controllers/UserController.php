@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 //use Intervention\Image\Image;
 use Intervention\Image\Facades\Image;
+use App\hochschulen;
 
 class UserController
 {
