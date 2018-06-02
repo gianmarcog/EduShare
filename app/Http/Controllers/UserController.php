@@ -8,11 +8,12 @@
 
 namespace App\Http\Controllers;
 
+use App\hochschulen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-//use Intervention\Image\Image;
 use Intervention\Image\Facades\Image;
-use App\hochschulen;
+
+//use Intervention\Image\Image;
 
 class UserController
 {
@@ -21,11 +22,26 @@ class UserController
         return view('account');
     }
 
-    public function update_avatar(Request $request){
-        if($request->hasFile('avatar')){
+    public function edit()
+    {
+        $hochschulen = hochschulen::all();
+        return view('bearbeiten')->with('hs', $hochschulen);
+    }
+
+    public function update(Request $request)
+    {
+        Auth::user()->email = $request->get('email');
+        Auth::user()->hochschule = $request->get('hochschule');
+        Auth::user()->save();
+        return view('account');
+    }
+
+    public function update_avatar(Request $request)
+    {
+        if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
-            $filename=time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300,300)->save(public_path('/image/ProfilePics/'.$filename));
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300, 300)->save(public_path('/image/ProfilePics/' . $filename));
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();

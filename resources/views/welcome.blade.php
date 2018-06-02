@@ -8,14 +8,14 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
+        <div class="item carousel-item active">
             <img class="d-block img-fluid objectfit" src="/image/Htwg.jpg" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
                 <h1>HTWG Konstanz</h1>
                 <h5>Studieren wo andere Urlaub machen</h5>
             </div>
         </div>
-        <div class="carousel-item">
+        <div class="item carousel-item">
             <img class="d-block img-fluid objectfit" src="/image/Berrys.jpg" alt="Second slide">
             <div class="carousel-caption d-none d-md-block">
                 <h1>Berry's Konstanz</h1>

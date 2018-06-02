@@ -15,6 +15,10 @@ Auth::routes();
 
 Route::get('/account', 'UserController@index')->name('account');
 
+Route::get('/account/bearbeiten', 'UserController@edit')->name('bearbeiten');
+
+Route::post('/account/bearbeiten', 'UserController@update')->name('bearbeiten');
+
 Route::post('/account', 'UserController@update_avatar');
 
 Route::get('/bewerten', function () {
