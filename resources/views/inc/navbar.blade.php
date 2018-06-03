@@ -14,8 +14,8 @@
                    href="{{route('uebersicht')}}">Übersicht</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ (\Request::route()->getName() == 'get_post') ? 'active' : '' }}"
-                   href="{{route('get_post')}}">Forum</a>
+                <a class="nav-link {{ (\Request::route()->getName() == 'forum') ? 'active' : '' }}"
+                   href="{{route('forum')}}">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}"

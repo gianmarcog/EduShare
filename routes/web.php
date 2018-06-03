@@ -13,10 +13,6 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('uebersicht');
-
 Route::get('/account', 'UserController@index')->name('account');
 
 Route::get('/account/bearbeiten', 'UserController@edit')->name('bearbeiten');
@@ -31,13 +27,22 @@ Route::get('/bewerten', function () {
 
 Route::get('/aktivitaeten', 'dbController@aktivitaeten')->name('aktivitaeten');
 
-Route::get('/aktivitaet/{id}', 'dbController@informationenAk');
+Route::get('/hochschulen', 'dbController@hochschulen')->name('hochschulen');
+
+
+Route::get('/forum', function () {
+    return view('forum ');
+})->name('forum')->middleware('auth');
 
 Route::get('/ranking', 'dbController@ranking')->name('ranking');
 
-Route::get('/hochschulen', 'dbController@hochschulen')->name('hochschulen');
+Route::get('/', function () {
+    return view('welcome');
+})->name('uebersicht');
 
 Route::get('/hochschule/{id}', 'dbController@informationenHs');
+
+Route::get('/aktivitaet/{id}', 'dbController@informationenAk');
 
 Route::get('/vorlesung/{id}', function () {
     return view('vorlesung');
@@ -48,7 +53,7 @@ Route::get('/search', function () {
     return view('searchresults');
 })->name('search');
 
-Route::group(['prefix' => 'question'], function () {
+Route::group(['prefix' => 'question'], function (){
 
     Route::get('post', [
         'as' => 'get_post',
@@ -60,4 +65,6 @@ Route::group(['prefix' => 'question'], function () {
         'uses' => 'ForumController@postQuestion'
     ]);
 });
-Route::get('/forum/release', 'PagesController@home');
+Route::get('/forum/release','PagesController@home');
+
+return view('forumRelease',compact('posts'));

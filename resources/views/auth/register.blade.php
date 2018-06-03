@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('layouts.form_errors')
 
 @section('content')
 <div class="container">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    @include('layouts.form_errors')
     <div class="mt-5 container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
