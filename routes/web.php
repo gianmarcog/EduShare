@@ -27,6 +27,8 @@ Route::post('/account', 'UserController@update_avatar');
 
 Route::get('/bewerten', 'BewertenController@showAll')->middleware('auth')->name('bewerten');
 
+Route::post('/bewerten', 'BewertenController@store');
+
 Route::get('/aktivitaeten', 'DbController@aktivitaeten')->name('aktivitaeten');
 
 Route::get('/aktivitaet/{id}', 'DbController@informationenAk');

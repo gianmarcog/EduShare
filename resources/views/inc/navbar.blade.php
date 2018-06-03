@@ -32,9 +32,9 @@
                         Kategorien
                     </a>
                     <div class="dropdown-menu">
-                        <a class="nav-link {{ (\Request::route()->getName() == 'aktivitaeten') ? 'active' : '' }}"
+                        <a class="ml-2 nav-link {{ (\Request::route()->getName() == 'aktivitaeten') ? 'active' : '' }}"
                            href="{{ route('aktivitaeten') }}">Aktivitäten</a>
-                        <a class="nav-link {{ (\Request::route()->getName() == 'hochschulen') ? 'active' : '' }}"
+                        <a class="ml-2 nav-link {{ (\Request::route()->getName() == 'hochschulen') ? 'active' : '' }}"
                            href="{{ route('hochschulen') }}">Hochschulen</a>
                     </div>
                 </div>
