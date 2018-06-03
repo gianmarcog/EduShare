@@ -9,7 +9,7 @@ class Post extends Model
 {
     protected $table = 'posts';
 
-    protected $fillable = ['category_id', 'title','body'];
+    protected $fillable = ['category_id', 'title','body','user_id'];
 
     protected $hidden = [];
 }

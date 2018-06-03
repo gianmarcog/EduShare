@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container">
+    <div class="container top-buffer">
         @forelse($posts as $post)
             <div class="jumbotron">
                 <h3>{{$post->title}}</h3>

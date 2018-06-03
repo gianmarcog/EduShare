@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
          $this->call(hochschulen::class);
         $this->call(aktivitaeten::class);
         $this->call(vorlesungen::class);
+        $this->call(kategorien::class);
     }
 }
