@@ -31,7 +31,7 @@ Route::get('/hochschulen', 'dbController@hochschulen')->name('hochschulen');
 
 
 Route::get('/forum', function () {
-    return view('forum');
+    return view('forum ');
 })->name('forum')->middleware('auth');
 
 Route::get('/ranking', 'dbController@ranking')->name('ranking');
@@ -52,3 +52,19 @@ Route::post('/live', 'searchController@livesearch')->name('live');
 Route::get('/search', function () {
     return view('searchresults');
 })->name('search');
+
+Route::group(['prefix' => 'question'], function (){
+
+    Route::get('post', [
+        'as' => 'get_post',
+        'uses' => 'ForumController@get_post'
+    ]);
+
+    Route::post('post', [
+        'as' => 'post_question',
+        'uses' => 'ForumController@postQuestion'
+    ]);
+});
+Route::get('/forum/release','PagesController@home');
+
+return view('forumRelease',compact('posts'));
