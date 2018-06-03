@@ -25,25 +25,24 @@ Route::post('/account/bearbeiten', 'UserController@update')->name('bearbeiten');
 
 Route::post('/account', 'UserController@update_avatar');
 
-Route::get('/bewerten', function () {
-    return view('bewerten');
-})->name('bewerten')->middleware('auth');
+Route::get('/bewerten', 'BewertenController@showAll')->middleware('auth')->name('bewerten');
 
-Route::get('/aktivitaeten', 'dbController@aktivitaeten')->name('aktivitaeten');
+Route::get('/aktivitaeten', 'DbController@aktivitaeten')->name('aktivitaeten');
 
-Route::get('/aktivitaet/{id}', 'dbController@informationenAk');
+Route::get('/aktivitaet/{id}', 'DbController@informationenAk');
 
-Route::get('/ranking', 'dbController@ranking')->name('ranking');
+Route::get('/ranking', 'DbController@ranking')->name('ranking');
 
-Route::get('/hochschulen', 'dbController@hochschulen')->name('hochschulen');
+Route::get('/hochschulen', 'DbController@hochschulen')->name('hochschulen');
 
-Route::get('/hochschule/{id}', 'dbController@informationenHs');
+Route::get('/hochschule/{id}', 'DbController@informationenHs');
 
 Route::get('/vorlesung/{id}', function () {
     return view('vorlesung');
 });
 
-Route::post('/live', 'searchController@livesearch')->name('live');
+Route::post('/live', 'SearchController@livesearch')->name('live');
+
 Route::get('/search', function () {
     return view('searchresults');
 })->name('search');
