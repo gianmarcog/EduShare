@@ -25,4 +25,8 @@ class BewertenController
         return view('bewerten')->with('h', $hochschule)->with('as', $aktivitaeten)->with('vs', $vorlesungen);
     }
 
+    public function store(){
+
+    }
+
 }

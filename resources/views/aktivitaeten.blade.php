@@ -10,7 +10,7 @@
                     <thead>
                     <tr>
                         <th id="column">Aktivität</th>
-                        <th id="column">Standort</th>
+                        <th id="column" class="notmobile">Standort</th>
                         <th id="column">Ranking</th>
                         <th id="detail">&nbsp;</th>
                     </tr>
@@ -19,7 +19,7 @@
                     @foreach ($a as $h)
                         <tr>
                             <td id="column"> {{  $h->name }} </td>
-                            <td id="column"> {{  $h->standort }}</td>
+                            <td id="column" class="notmobile"> {{  $h->standort }}</td>
                             <td id="column"> {{  $h->ranking }}</td>
                             <td>
                                 <form action="/aktivitaet/{{ $h->id }}">
