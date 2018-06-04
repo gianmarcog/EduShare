@@ -1,12 +1,26 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="container top-buffer">
+    <div class="card">
         @forelse($posts as $post)
-            <div class="jumbotron">
-                <h3>{{$post->title}}</h3>
-                <h5>{{$post->category_id}}</h5>
+            <div class="card-header">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-heading"><a href="/forum/antworten/{{$post->id}}">{{$post->title}}</a>  </h4>
+                    <p class="text-right">By: {{$post->user->name}}</p>
                 <p>{{$post->body}}</p>
+                    <ul class="list-inline list-unstyled">
+                    <li><span><i class="glyphicon glyphicon-calendar"> </i>
+
+                        @if($post->replies->count() > 0)
+                          <li> {{$post->created_at->diffForHumans()}} </span> | {{$post->replies->count()}} comment(s)</li>
+
+                            @else()
+                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte du als erster </li>
+                            @endif
+                </ul>
+                    </div>
+                </div>
             </div>
         @empty
             <p>No posts found</p>

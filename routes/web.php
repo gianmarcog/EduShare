@@ -60,3 +60,5 @@ Route::group(['prefix' => 'question'], function () {
     ]);
 });
 Route::get('/forum/release', 'PagesController@home');
+
+Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten');
