@@ -427,7 +427,7 @@
   array (
     'paths' => 
     array (
-      0 => '/resources/views',
+      0 => '/resources/views/',
     ),
     'compiled' => '/home/rene/IdeaProjects/EduShare/storage/framework/views',
   ),
