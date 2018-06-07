@@ -31,16 +31,29 @@
                         <tbody>
                         <tr>
                             <td id="column"> {{  $h->name }} </td>
+                            <input type='hidden' name="name" value="{{  $h->name }}"/>
                             <td id="column" class="notmobile"> {{  $h->standort }}</td>
                             <td id="bewertung"><input id="bewertungH" type="number" class="form-control"
-                                                      name="bewertungH" value="{{ $h->ranking }}" required></td>
+                                                      name="bewertung"
+                                                      @if($bewertungHochschule->bewertung ==='nicht bewertet')
+                                                      placeholder="{{ $bewertungHochschule->bewertung }}"
+                                                      @else
+                                                      value="{{ $bewertungHochschule->bewertung }}"
+                                                      disabled
+                                                      @endif
+                                                      required></td>
                             @if ($errors->has('bewertungH'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('bewertungH') }}</strong>
                                     </span>
                             @endif
                             <td>
-                                <button type="submit" class="btn btn-primary">Bewerten</button>
+                                <button type="submit" class="btn btn-primary"
+                                        @if($bewertungHochschule->bewertung !=='nicht bewertet')
+                                        disabled
+                                        @endif
+                                >Bewerten
+                                </button>
                             </td>
                         </tr>
                         </tbody>
@@ -70,16 +83,33 @@
                         @foreach ($vs as $v)
                             <tr>
                                 <td id="column"> {{  $v->name }}</td>
+                                <input type='hidden' name="name" value="{{  $v->name }}"/>
                                 <td id="column" class="notmobile"> {{  $v->professor }}</td>
                                 <td id="bewertung"><input id="bewertungV" type="number" class="form-control"
-                                                          name="bewertungV" value="{{ $h->ranking }}" required></td>
+                                                          name="bewertung"
+                                                          @foreach ($bewertungen as $bewertung)
+                                                          @if($bewertung->bezeichnung === $v->name)
+                                                          value="{{ $bewertung->bewertung }}"
+                                                          disabled
+                                                          @else
+                                                          placeholder="nicht bewertet"
+                                                          @endif
+                                                          @endforeach
+                                                          required>
+                                </td>
                                 @if ($errors->has('bewertungV'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('bewertungV') }}</strong>
                                     </span>
                                 @endif
                                 <td>
-                                    <button type="submit" class="btn btn-primary">Bewerten</button>
+                                    <button
+                                            @if($bewertung->bezeichnung === $v->name)
+                                            disabled
+                                            @endif
+                                            type="submit"
+                                            class="btn btn-primary">Bewerten
+                                    </button>
                                 </td>
                             </tr>
                         @endforeach
@@ -110,16 +140,32 @@
                         @foreach ($as as $a)
                             <tr>
                                 <td id="column"> {{  $a->name }} </td>
+                                <input type='hidden' name="name" value="{{  $a->name }}"/>
                                 <td id="column" class="notmobile"> {{  $a->standort }}</td>
                                 <td id="bewertung"><input id="bewertungA" type="number" class="form-control"
-                                                          name="bewertungA" value="{{ $h->ranking }}" required></td>
+                                                          name="bewertung"
+                                                          @foreach ($bewertungen as $bewertung)
+                                                          @if($bewertung->bezeichnung === $a->name)
+                                                          value="{{ $bewertung->bewertung }}"
+                                                          disabled
+                                                          @else
+                                                          placeholder="nicht bewertet"
+                                                          @endif
+                                                          @endforeach
+                                                          required>
                                 @if ($errors->has('bewertungA'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('bewertungA') }}</strong>
                                     </span>
                                 @endif
                                 <td>
-                                    <button type="submit" class="btn btn-primary">Bewerten</button>
+                                    <button
+                                            @if($bewertung->bezeichnung === $a->name)
+                                            disabled
+                                            @endif
+                                            type="submit"
+                                            class="btn btn-primary">Bewerten
+                                    </button>
                                 </td>
                             </tr>
                         @endforeach

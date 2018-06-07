@@ -12,8 +12,6 @@ class searchController
     public function livesearch(Request $request)
     {
         $query = $request->get('value');
-        include 'functions.php';
-        debug_to_console($query);
         $hochschulen = hochschulen::where('name', 'LIKE', '%' . $query . '%')
             ->orwhere('standort', 'LIKE', '%' . $query . '%')->get();
         $aktivitaeten = aktivitaeten::where('name', 'LIKE', '%' . $query . '%')

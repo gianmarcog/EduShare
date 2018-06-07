@@ -38,6 +38,12 @@ h5 {
     border-color: #46BA97;
 }
 
+.btn-primary:disabled {
+    color: #fff;
+    background-color: #ADADAD;
+    border-color: #ADADAD;
+}
+
 .btn-secondary {
     color: #fff;
     background-color: #ADADAD;

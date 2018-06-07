@@ -41,27 +41,27 @@ class dbController extends Controller
         return $this->index();
     }
 
-    public function show(Request $request, $id)
+    public function show($id)
     {
         $hochschule = hochschulen::find($id);
         return view('aktivitaeten')->with('h', $hochschule);
     }
 
-    public function destroy(Request $request, $id)
+    public function destroy($id)
     {
         $hochschule = hochschulen::find($id);
         $hochschule->delete();
         return $this->index();
     }
 
-    public function informationenHs(Request $request, $id)
+    public function informationenHs($id)
     {
         $hochschule = hochschulen::where('id', '=', $id)->get();
         $vorlesungen = vorlesungen::where('hid','=',$id)->get();
         return view('hochschule')->with('hs', $hochschule)->with('vs',$vorlesungen);
     }
 
-    public function informationenAk(Request $request, $id)
+    public function informationenAk($id)
     {
         $aktivitaet = aktivitaeten::where('id', '=', $id)->get();
         return view('aktivitaet')->with('a', $aktivitaet);
