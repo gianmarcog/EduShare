@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'db4free.net'),
+            'host' => env('DB_HOST', 'wete.ch2g9nokdg1u.us-west-2.rds.amazonaws.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'edushare'),
-            'username' => env('DB_USERNAME', 'edushare'),
-            'password' => env('DB_PASSWORD', 'edushare'),
+            'database' => env('DB_DATABASE', 'EduShare'),
+            'username' => env('DB_USERNAME', 'WETE5'),
+            'password' => env('DB_PASSWORD', '***REMOVED***'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
