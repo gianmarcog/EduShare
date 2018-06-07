@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="edushare@db4free.net" uuid="00a76313-361b-4027-9a41-10ddb5b1c7e3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
+    <data-source name="AmazonDB" uuid="54b0412a-b28f-4b7f-834d-7b38174f561b">
+      <database-info product="MySQL" version="5.6.37-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>WETE5</user-name>
+      <introspection-schemas>*:EduShare</introspection-schemas>
+    </data-source>
+  </component>
+</project>
