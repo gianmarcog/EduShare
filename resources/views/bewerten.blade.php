@@ -87,6 +87,9 @@
                                 <td id="column" class="notmobile"> {{  $v->professor }}</td>
                                 <td id="bewertung"><input id="bewertungV" type="number" class="form-control"
                                                           name="bewertung"
+                                                          @if($bewertungen->bewertung ==='nicht bewertet')
+                                                          placeholder="nicht bewertet"
+                                                          @else
                                                           @foreach ($bewertungen as $bewertung)
                                                           @if($bewertung->bezeichnung === $v->name)
                                                           value="{{ $bewertung->bewertung }}"
@@ -95,6 +98,7 @@
                                                           placeholder="nicht bewertet"
                                                           @endif
                                                           @endforeach
+                                                          @endif
                                                           required>
                                 </td>
                                 @if ($errors->has('bewertungV'))
@@ -104,8 +108,10 @@
                                 @endif
                                 <td>
                                     <button
+                                            @if($bewertungen->bewertung !=='nicht bewertet')
                                             @if($bewertung->bezeichnung === $v->name)
                                             disabled
+                                            @endif
                                             @endif
                                             type="submit"
                                             class="btn btn-primary">Bewerten
@@ -144,6 +150,9 @@
                                 <td id="column" class="notmobile"> {{  $a->standort }}</td>
                                 <td id="bewertung"><input id="bewertungA" type="number" class="form-control"
                                                           name="bewertung"
+                                                          @if($bewertungen->bewertung ==='nicht bewertet')
+                                                          placeholder="nicht bewertet"
+                                                          @else
                                                           @foreach ($bewertungen as $bewertung)
                                                           @if($bewertung->bezeichnung === $a->name)
                                                           value="{{ $bewertung->bewertung }}"
@@ -152,16 +161,19 @@
                                                           placeholder="nicht bewertet"
                                                           @endif
                                                           @endforeach
+                                                          @endif
                                                           required>
-                                @if ($errors->has('bewertungA'))
-                                    <span class="help-block">
+                                    @if ($errors->has('bewertungA'))
+                                        <span class="help-block">
                                         <strong>{{ $errors->first('bewertungA') }}</strong>
                                     </span>
                                 @endif
                                 <td>
                                     <button
+                                            @if($bewertungen->bewertung !=='nicht bewertet')
                                             @if($bewertung->bezeichnung === $a->name)
                                             disabled
+                                            @endif
                                             @endif
                                             type="submit"
                                             class="btn btn-primary">Bewerten
