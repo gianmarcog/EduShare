@@ -30,7 +30,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Name</th>
-                        <th id="column">Standort</th>
+                        <th id="column" class="notmobile">Standort</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -39,7 +39,7 @@ class searchController
             foreach ($hochschulen as $hochschule) {
                 $content = '<tr>
                             <td id="column">' . $hochschule->name . '</td>
-                            <td id="column">' . $hochschule->standort . '</td>
+                            <td id="column" class="notmobile">' . $hochschule->standort . '</td>
                             <td id="column">' . $hochschule->ranking . '</td>
                             <td>
                                 <form action="/hochschule/' . $hochschule->id . '">
@@ -66,7 +66,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Aktivität</th>
-                        <th id="column">Standort</th>
+                        <th id="column" class="notmobile">Standort</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -75,7 +75,7 @@ class searchController
             foreach ($aktivitaeten as $aktivitaet) {
                 $content = '<tr>
                             <td id="column">' . $aktivitaet->name . '</td>
-                            <td id="column">' . $aktivitaet->standort . '</td>
+                            <td id="column" class="notmobile">' . $aktivitaet->standort . '</td>
                             <td id="column">' . $aktivitaet->ranking . '</td>
                             <td>
                                 <form action="/aktivitaet/' . $aktivitaet->id . '">
@@ -102,7 +102,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Name</th>
-                        <th id="column">Professor</th>
+                        <th id="column" class="notmobile">Professor</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -111,7 +111,7 @@ class searchController
             foreach ($vorlesungen as $vorlesung) {
                 $content = '<tr>
                             <td id="column">' . $vorlesung->name . '</td>
-                            <td id="column">' . $vorlesung->professor . '</td>
+                            <td id="column" class="notmobile">' . $vorlesung->professor . '</td>
                             <td id="column">' . $vorlesung->ranking . '</td>
                             <td>
                                 <form action="/hochschule/' . $vorlesung->hid . '">

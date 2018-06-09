@@ -1,4 +1,7 @@
-$('#search').on('keyup', function () {
+$('#search').on('keydown', function () {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

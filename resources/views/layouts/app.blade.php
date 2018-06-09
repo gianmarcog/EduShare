@@ -21,9 +21,9 @@
 
 
 </head>
-<body>
+<body class="Site">
 @include('inc.navbar')
-<div id="app">
+<div id="app" class="Site-content">
     @yield('content')
 </div>
 @include('inc.footer')
