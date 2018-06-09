@@ -56,15 +56,15 @@ class dbController extends Controller
 
     public function informationenHs($id)
     {
-        $hochschule = hochschulen::where('id', '=', $id)->get();
+        $hochschule = hochschulen::where('id', '=', $id)->first();
         $vorlesungen = vorlesungen::where('hid','=',$id)->get();
-        return view('hochschule')->with('hs', $hochschule)->with('vs',$vorlesungen);
+        return view('hochschule')->with('hochschule', $hochschule)->with('vs',$vorlesungen);
     }
 
     public function informationenAk($id)
     {
-        $aktivitaet = aktivitaeten::where('id', '=', $id)->get();
-        return view('aktivitaet')->with('a', $aktivitaet);
+        $aktivitaet = aktivitaeten::where('id', '=', $id)->first();
+        return view('aktivitaet')->with('aktivitaet', $aktivitaet);
     }
 
 
