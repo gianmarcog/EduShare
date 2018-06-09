@@ -48,7 +48,7 @@
             <img src="/image/basketball.jpg" class="img-responsive rounded" style="width:100%" alt="Image">
             <h4>Aktivitäten</h4>
             <div class="col-12">
-                <p>Hast du Lust auf eine Hochschule die dir deine Freizeitaktivitäten bietet?</p>
+                <p>Finde eine Hochschule die dir deine Freizeitaktivitäten bietet.</p>
             </div>
         </div>
         <div class="col-sm-4">
