@@ -12,6 +12,7 @@ class searchController
     public function livesearch(Request $request)
     {
         $query = $request->get('value');
+        $filter = $request->get('filter');
         $hochschulen = hochschulen::where('name', 'LIKE', '%' . $query . '%')
             ->orwhere('standort', 'LIKE', '%' . $query . '%')->get();
         $aktivitaeten = aktivitaeten::where('name', 'LIKE', '%' . $query . '%')
@@ -20,7 +21,7 @@ class searchController
             ->orwhere('professor', 'LIKE', '%' . $query . '%')->get();
 
         $html = '';
-        if (count($hochschulen) !== 0) {
+        if (count($hochschulen) !== 0 && ($filter === 'Alles' || $filter === 'Hochschulen')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -56,7 +57,7 @@ class searchController
     </div>';
         }
 
-        if (count($aktivitaeten) !== 0) {
+        if (count($aktivitaeten) !== 0 && ($filter === 'Alles' || $filter === 'Aktivitaeten')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -92,7 +93,7 @@ class searchController
     </div>';
         }
 
-        if (count($vorlesungen) !== 0) {
+        if (count($vorlesungen) !== 0 && ($filter === 'Alles' || $filter === 'Vorlesungen')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -127,7 +128,7 @@ class searchController
         </div>
     </div>';
         }
-        if(count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0){
+        if (count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0) {
             $html .= '<h4 class="col-4 mx-auto">Keine Ergebnisse gefunden!</h4>';
         }
         return $html;

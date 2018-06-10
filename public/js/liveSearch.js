@@ -1,3 +1,7 @@
+$('#filter').change(function(){
+    $('#search').keydown();
+});
+
 $('#search').on('keydown', function () {
     if (event.keyCode == 13) {
         event.preventDefault();
@@ -12,7 +16,8 @@ $('#search').on('keydown', function () {
         type: 'POST',
         dataType: 'html',
         data: {
-            'value': $(this).val()
+            'value': $(this).val(),
+            'filter': $('#filter').find(":selected").text()
         },
         success: function (data) {
             $('#searchOutput').html(data);
