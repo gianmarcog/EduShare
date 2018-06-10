@@ -36,5 +36,12 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <form class="col-12 form-horizontal top-buffer" action="{{ route('deleteAccount') }}">
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Bist du sicher dass du diesen Account unwiderruflich löschen willst?')">
+                    Account löschen
+                </button>
+            </form>
+        </div>
     </div>
 @endsection

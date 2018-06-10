@@ -20,11 +20,6 @@
                                 data-stroke="#004561"
                         ></div>
                     </div>
-                    <div class="row top-buffer">
-                        <div class="mx-auto">
-                            <a href="{{$aktivitaet->url}}">Webseite</a>
-                        </div>
-                    </div>
             </div>
         </div>
     </div>

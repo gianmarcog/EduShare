@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::get('/account', 'UserController@index')->name('account');
 
+Route::get('/account/delete','UserController@delete')->name('deleteAccount');
+
 Route::get('/account/bearbeiten', 'UserController@edit')->name('bearbeiten');
 
 Route::post('/account/bearbeiten', 'UserController@update')->name('bearbeiten');
