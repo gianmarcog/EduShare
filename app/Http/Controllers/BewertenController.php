@@ -21,7 +21,7 @@ class BewertenController
     {
         $hochschule = hochschulen::where('name', '=', Auth::user()->hochschule)->first();
 
-        $aktivitaeten = aktivitaeten::all();
+        $aktivitaeten = aktivitaeten::where('standort','=',$hochschule->standort)->get();
 
         $vorlesungen = vorlesungen::where('hid', '=', $hochschule->id)->get();
 
@@ -29,11 +29,11 @@ class BewertenController
 
         $bewertungen = Bewertungen::where('user_id', '=', Auth::user()->id)->get();
 
-        include 'functions.php';
         if (empty($bewertungHochschule)) {
             $bewertungHochschule = new Bewertungen();
             $bewertungHochschule->bewertung = 'nicht bewertet';
         }
+
         return view('bewerten')
             ->with('h', $hochschule)
             ->with('as', $aktivitaeten)
@@ -49,7 +49,34 @@ class BewertenController
         $bewertung->bezeichnung = $request->get('name');
         $bewertung->bewertung = $request->get('bewertung');
         $bewertung->save();
+        $this->refresh($request->get('name'));
         return redirect('/bewerten');
+    }
+
+    public function refresh($bezeichnung){
+        $bewertungen = Bewertungen::where('bezeichnung', '=', $bezeichnung)->get();
+        $sum=0;
+        $count=0;
+        foreach ($bewertungen as $bewertung){
+            $sum += $bewertung->bewertung;
+            $count++;
+        }
+        $average=$sum / $count;
+        $hochschule = hochschulen::where('name', '=', $bezeichnung)->first();
+        $aktivitaet = aktivitaeten::where('name', '=', $bezeichnung)->first();
+        $vorlesung = vorlesungen::where('name', '=', $bezeichnung)->first();
+        if (!empty($hochschule)) {
+            $hochschule->ranking = $average;
+            $hochschule->save();
+        }
+        if (!empty($aktivitaet)) {
+            $aktivitaet->ranking = $average;
+            $aktivitaet->save();
+        }
+        if (!empty($vorlesung)) {
+            $vorlesung->ranking = $average;
+            $vorlesung->save();
+        }
     }
 
 }

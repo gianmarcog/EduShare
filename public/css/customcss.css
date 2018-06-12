@@ -15,6 +15,16 @@ h5 {
     font-style: italic;
 }
 
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+}
+
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
@@ -98,10 +108,17 @@ h5 {
     margin-top: 30px;
 }
 
+.progress-bar {
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
 @media (max-width: 767.98px) {
     .top-buffer-mobile {
         margin-top: 30px;
     }
+
     .notmobile {
         display: none !important;
     }
@@ -119,12 +136,6 @@ h5 {
     width: 10%;
 }
 
-#bewertung{
+#bewertung {
     float: left;
-}
-
-.progress-bar {
-    position: relative;
-    height: 100px;
-    width: 100px;
 }

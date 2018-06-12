@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 use App\hochschulen;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
@@ -47,5 +48,16 @@ class UserController
             $user->save();
         }
         return view('account');
+    }
+
+    public function delete(){
+        $user = User::find(Auth::user()->id);
+
+        Auth::logout();
+
+        if ($user->delete()) {
+
+            return redirect('/')->with('global', 'Dein Account wurde gelöscht!');
+        }
     }
 }

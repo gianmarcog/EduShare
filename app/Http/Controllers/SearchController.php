@@ -12,6 +12,7 @@ class searchController
     public function livesearch(Request $request)
     {
         $query = $request->get('value');
+        $filter = $request->get('filter');
         $hochschulen = hochschulen::where('name', 'LIKE', '%' . $query . '%')
             ->orwhere('standort', 'LIKE', '%' . $query . '%')->get();
         $aktivitaeten = aktivitaeten::where('name', 'LIKE', '%' . $query . '%')
@@ -20,7 +21,7 @@ class searchController
             ->orwhere('professor', 'LIKE', '%' . $query . '%')->get();
 
         $html = '';
-        if (count($hochschulen) !== 0) {
+        if (count($hochschulen) !== 0 && ($filter === 'Alles' || $filter === 'Hochschulen')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -30,7 +31,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Name</th>
-                        <th id="column">Standort</th>
+                        <th id="column" class="notmobile">Standort</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -39,7 +40,7 @@ class searchController
             foreach ($hochschulen as $hochschule) {
                 $content = '<tr>
                             <td id="column">' . $hochschule->name . '</td>
-                            <td id="column">' . $hochschule->standort . '</td>
+                            <td id="column" class="notmobile">' . $hochschule->standort . '</td>
                             <td id="column">' . $hochschule->ranking . '</td>
                             <td>
                                 <form action="/hochschule/' . $hochschule->id . '">
@@ -56,7 +57,7 @@ class searchController
     </div>';
         }
 
-        if (count($aktivitaeten) !== 0) {
+        if (count($aktivitaeten) !== 0 && ($filter === 'Alles' || $filter === 'Aktivitaeten')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -66,7 +67,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Aktivität</th>
-                        <th id="column">Standort</th>
+                        <th id="column" class="notmobile">Standort</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -75,7 +76,7 @@ class searchController
             foreach ($aktivitaeten as $aktivitaet) {
                 $content = '<tr>
                             <td id="column">' . $aktivitaet->name . '</td>
-                            <td id="column">' . $aktivitaet->standort . '</td>
+                            <td id="column" class="notmobile">' . $aktivitaet->standort . '</td>
                             <td id="column">' . $aktivitaet->ranking . '</td>
                             <td>
                                 <form action="/aktivitaet/' . $aktivitaet->id . '">
@@ -92,7 +93,7 @@ class searchController
     </div>';
         }
 
-        if (count($vorlesungen) !== 0) {
+        if (count($vorlesungen) !== 0 && ($filter === 'Alles' || $filter === 'Vorlesungen')) {
             $html .= '<div class="container">
         <div class="row">
             <div class="col-12">
@@ -102,7 +103,7 @@ class searchController
                     <thead>
                     <tr>
                         <th id="column">Name</th>
-                        <th id="column">Professor</th>
+                        <th id="column" class="notmobile">Professor</th>
                         <th id="column">Ranking</th>
                         <th id="column">&nbsp;</th>
                     </tr>
@@ -111,7 +112,7 @@ class searchController
             foreach ($vorlesungen as $vorlesung) {
                 $content = '<tr>
                             <td id="column">' . $vorlesung->name . '</td>
-                            <td id="column">' . $vorlesung->professor . '</td>
+                            <td id="column" class="notmobile">' . $vorlesung->professor . '</td>
                             <td id="column">' . $vorlesung->ranking . '</td>
                             <td>
                                 <form action="/hochschule/' . $vorlesung->hid . '">
@@ -127,7 +128,7 @@ class searchController
         </div>
     </div>';
         }
-        if(count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0){
+        if (count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0) {
             $html .= '<h4 class="col-4 mx-auto">Keine Ergebnisse gefunden!</h4>';
         }
         return $html;
