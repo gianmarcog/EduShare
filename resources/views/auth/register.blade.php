@@ -99,7 +99,7 @@
             </form>
         </div>
         <div class="row">
-            <h5 class="col-12 top-buffer">Durch einen EduShare hast du viele Vorteile, unter anderem kannst du: </h5>
+            <h5 class="col-12 top-buffer">Durch einen EduShare Account hast du viele Vorteile, unter anderem kannst du: </h5>
             <ul>
                 <li>Deine Hochschule, Vorlesungen und Aktivitäten bewerten</li>
                 <li>Forums Beiträge erstellen und lesen</li>

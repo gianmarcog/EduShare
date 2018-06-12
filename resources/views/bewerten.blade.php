@@ -106,24 +106,20 @@
                                 <span class="help-block">
                                         <strong>{{ $errors->first('bewertungV') }}</strong>
                                     </span>
-                            @endif
-                            <td>
-                                <input
-                                        form="formV{{$v->id}}"
-                                        @foreach ($bewertungen as $bewertung)
-                                        @if($bewertung->bezeichnung === $v->name)
-                                        disabled
-                                        @endif
-                                        @endforeach
-                                        type="submit"
-                                        class="btn btn-primary"
-                                        value="Bewerten"
-                                >
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                                @endif
+                                <td>
+                                    <button
+                                            @if($bewertung->bezeichnung === $v->name)
+                                            disabled
+                                            @endif
+                                            type="submit"
+                                            class="btn btn-primary">Bewerten
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </form>
             </div>
         </div>
@@ -133,62 +129,53 @@
         <div class="row">
             <div class="col-12">
                 <p></p>
-                <h3>Aktivitäten in Konstanz</h3>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th id="column">Aktivität</th>
-                        <th id="column" class="notmobile">Standort</th>
-                        <th id="column">Deine Bewertung</th>
-                        <th id="detail">&nbsp;</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach ($as as $a)
-                        <form id="formA{{$a->id}}" class="form-horizontal" method="POST"
-                              action="{{ route('bewerten') }}"></form>
-                        <input form="formA{{$a->id}}" type="hidden" name="_token" value="{{ csrf_token() }}">
+                <h3>Aktivitäten</h3>
+                <form class="form-horizontal" method="POST" action="{{ route('bewerten') }}">
+                    {{ csrf_field() }}
+                    <table class="table">
+                        <thead>
                         <tr>
-                            <td id="column"> {{  $a->name }} </td>
-                            <input form="formA{{$a->id}}" type='hidden' name="name" value="{{  $a->name }}"/>
-                            <td id="column" class="notmobile"> {{  $a->standort }}</td>
-                            <td id="bewertung"><input form="formA{{$a->id}}" id="bewertungA" type="number"
-                                                      class="form-control"
-                                                      name="bewertung"
-                                                      @if (!empty($bewertungen))
-                                                      @foreach ($bewertungen as $bewertung)
-                                                      @if($bewertung->bezeichnung === $a->name)
-                                                      value="{{ $bewertung->bewertung }}"
-                                                      disabled
-                                                      @else
-                                                      placeholder="nicht bewertet"
-                                                      @endif
-                                                      @endforeach
-                                                      @endif
-                                                      placeholder="nicht bewertet"
-                                                      required>
+                            <th id="column">Aktivität</th>
+                            <th id="column" class="notmobile">Standort</th>
+                            <th id="column">Deine Bewertung</th>
+                            <th id="detail">&nbsp;</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach ($as as $a)
+                            <tr>
+                                <td id="column"> {{  $a->name }} </td>
+                                <input type='hidden' name="name" value="{{  $a->name }}"/>
+                                <td id="column" class="notmobile"> {{  $a->standort }}</td>
+                                <td id="bewertung"><input id="bewertungA" type="number" class="form-control"
+                                                          name="bewertung"
+                                                          @foreach ($bewertungen as $bewertung)
+                                                          @if($bewertung->bezeichnung === $a->name)
+                                                          value="{{ $bewertung->bewertung }}"
+                                                          disabled
+                                                          @else
+                                                          placeholder="nicht bewertet"
+                                                          @endif
+                                                          @endforeach
+                                                          required>
                                 @if ($errors->has('bewertungA'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('bewertungA') }}</strong>
                                     </span>
-                            @endif
-                            <td>
-                                <input
-                                        form="formA{{$a->id}}"
-                                        @foreach ($bewertungen as $bewertung)
-                                        @if($bewertung->bezeichnung === $a->name)
-                                        disabled
-                                        @endif
-                                        @endforeach
-                                        type="submit"
-                                        class="btn btn-primary"
-                                        value="Bewerten"
-                                >
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                                @endif
+                                <td>
+                                    <button
+                                            @if($bewertung->bezeichnung === $a->name)
+                                            disabled
+                                            @endif
+                                            type="submit"
+                                            class="btn btn-primary">Bewerten
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 </form>
             </div>
         </div>
