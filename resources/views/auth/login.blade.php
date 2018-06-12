@@ -45,7 +45,7 @@
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox"
-                                                   name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                                   name="remember" {{ old('remember') ? 'checked' : '' }}> Login merken
                                         </label>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@
                                         Login
                                     </button>
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        Forgot Your Password?
+                                        Passwort vergessen?
                                     </a>
                                 </div>
                             </div>
@@ -65,7 +65,7 @@
                             <form>
                                 <div class="form-group">
                                     <div class="col-md-8 col-md-offset-4">
-                                        <a href="{{ route('register') }}"> Registrierung </a>
+                                        <a class="btn btn-primary" href="{{ route('register') }}"> Registrierung </a>
                                     </div>
                                 </div>
                             </form>
