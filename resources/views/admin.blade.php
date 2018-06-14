@@ -25,6 +25,35 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>Admin Interface: </h1>
+                <h2 class="top-buffer">Nutzer: </h2>
+                {!! Form::open(['action' => 'AdminController@bulk_updateUS', 'method' => "POST", "class"=>"form-inline"]) !!}
+                <div class="form-group">
+                    <label for="lead_status" class="mr-2">Für die ausgewählten Zeilen wird der</label>
+                    {!! Form::select('bulk_name', $user_Spalten, [], ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group">
+                    <label for="lead_status" class="ml-2 mr-2">geändert zu: </label>
+                    {!! Form::text('bulk_value', null, ['class' => 'form-control'])!!}
+                </div>
+                <button class="btn btn-primary ml-4">Speichern</button>
+                <hr>
+                <table class="table table-striped top-buffer">
+                    @foreach($user as $u)
+                        <tr>
+                            <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$u->id}}" /></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
+                        </tr>
+                    @endforeach
+                </table>
+                {!! Form::close() !!}
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <h2 class="top-buffer">Hochschulen: </h2>
                 {!! Form::open(['action' => 'AdminController@bulk_updateHS', 'method' => "POST", "class"=>"form-inline"]) !!}
                 <div class="form-group">
