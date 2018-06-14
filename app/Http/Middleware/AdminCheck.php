@@ -19,7 +19,7 @@ class AdminCheck
     {
         $user = Auth::user();
         if (empty($user)) {
-            return redirect('/')->withErrors(['Du bist nicht autorisiert auf diese Seite zuzugreifen.', 'msg']);
+            return redirect('/')->withErrors(['Melde dich mit einem Administrator Account an, um auf diese Seite zuzugreifen.', 'msg']);
         }
         $role = role::where('user_id', '=', $user->id)->first();
 
@@ -27,6 +27,6 @@ class AdminCheck
             return $next($request);
         }
 
-        return redirect('/')->withErrors(['Du bist nicht autorisiert auf die Admin Seite zuzugreifen.', 'msg']);
+        return redirect('/')->withErrors(['Du bist nicht autorisiert auf die Administrator Seite zuzugreifen.', 'msg']);
     }
 }

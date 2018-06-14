@@ -4,7 +4,6 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -38,6 +37,16 @@ class User extends Authenticatable
         return $this->belongsToMany('Role', 'role');
     }
 
+    public function isAdmin()
+    {
+        $role = role::where('user_id', '=', $this->id)->first();
+        if ($role->role === 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function makeRole($title)
     {
         $role = new role();
@@ -49,4 +58,6 @@ class User extends Authenticatable
         }
         $role->save();
     }
+
+
 }
