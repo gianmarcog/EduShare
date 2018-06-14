@@ -53,6 +53,11 @@
                 </p>
 
                 <ul class="dropdown-menu">
+                    @if(Auth::user()->isAdmin())
+                        <li>
+                            <a href="{{url('/admin')}}" class="ml-2">Admin</a>
+                        </li>
+                    @endif
                     <li>
                         <a href="{{route('account')}}" class="ml-2">Account</a>
                     </li>

@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+    @if($errors->any())
+        <h4 class="text-center">{{$errors->first()}}</h4>
+    @endif
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

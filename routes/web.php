@@ -66,3 +66,14 @@ Route::group(['prefix' => 'question'], function () {
 Route::get('/forum/release', 'PagesController@home');
 
 Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten');
+
+
+Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');;
+Route::post('admin/updateHS/{id}', ['as' => 'admin/updateHS', 'uses' => 'AdminController@updateHS']);
+Route::post('admin/bulk_updateHS', ['as' => 'admin/bulk_updateHS', 'uses' => 'AdminController@bulk_updateHS']);
+Route::post('admin/updateAK/{id}', ['as' => 'admin/updateAK', 'uses' => 'AdminController@updateAK']);
+Route::post('admin/bulk_updateAK', ['as' => 'admin/bulk_updateAK', 'uses' => 'AdminController@bulk_updateAK']);
+Route::post('admin/updateVL/{id}', ['as' => 'admin/updateVL', 'uses' => 'AdminController@updateVL']);
+Route::post('admin/bulk_updateVL', ['as' => 'admin/bulk_updateVL', 'uses' => 'AdminController@bulk_updateVL']);
+Route::post('admin/updateUS/{id}', ['as' => 'admin/updateUS', 'uses' => 'AdminController@updateUS']);
+Route::post('admin/bulk_updateUS', ['as' => 'admin/bulk_updateUS', 'uses' => 'AdminController@bulk_updateUS']);
