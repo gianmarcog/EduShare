@@ -2,8 +2,9 @@
 
 namespace App;
 
-use  Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -27,7 +28,25 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function post(){
+    public function post()
+    {
         return $this->hasMany('App\Post');
+    }
+
+    public function roles()
+    {
+        return $this->belongsToMany('Role', 'role');
+    }
+
+    public function makeRole($title)
+    {
+        $role = new role();
+        $role->user_id = $this->id;
+        if ($title === 'admin') {
+            $role->role = 1;
+        } elseif ($title === 'user') {
+            $role->role = 0;
+        }
+        $role->save();
     }
 }
