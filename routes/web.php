@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
 
+Route::get('/kontakt', function () {
+    return view('kontakt');
+})->name('kontakt');
+
+Route::get('/impressum', function () {
+    return view('impressum');
+})->name('impressum');
+
 Route::get('/account', 'UserController@index')->name('account')->middleware('auth');
 
 Route::get('/account/delete','UserController@delete')->name('deleteAccount');
