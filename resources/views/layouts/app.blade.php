@@ -30,9 +30,6 @@
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js"></script>
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="/js/app.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>

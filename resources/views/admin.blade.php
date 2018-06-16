@@ -41,9 +41,9 @@
                     @foreach($user as $u)
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$u->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
                         </tr>
                     @endforeach
                 </table>
@@ -101,8 +101,8 @@
                     @foreach($aktivitaeten as $aktivitaet)
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$aktivitaet->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="name">{{$aktivitaet->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="name">{{$aktivitaet->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
                         </tr>
                     @endforeach
                 </table>
@@ -131,8 +131,8 @@
                     @foreach($vorlesungen as $vorlesung)
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$vorlesung->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="name">{{$vorlesung->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="name">{{$vorlesung->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
                         </tr>
                     @endforeach
                 </table>
@@ -144,27 +144,4 @@
 
 
     </div>
-@endsection
-
-@section('scripts')
-    <script>
-        $.fn.editable.defaults.mode = 'inline';
-        $(document).ready(function() {
-            $('.testEdit').editable({
-                params: function(params) {
-                    // add additional params from data-attributes of trigger element
-                    params.name = $(this).editable().data('name');
-                    return params;
-                },
-                error: function(response, newValue) {
-                    if(response.status === 500) {
-                        return 'Server error. Check entered data.';
-                    } else {
-                        return response.responseText;
-                        // return "Error.";
-                    }
-                }
-            });
-        });
-    </script>
 @endsection

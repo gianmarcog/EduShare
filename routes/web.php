@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
 
-Route::get('/account', 'UserController@index')->name('account');
+Route::get('/account', 'UserController@index')->name('account')->middleware('auth');
 
 Route::get('/account/delete','UserController@delete')->name('deleteAccount');
 
@@ -68,7 +68,7 @@ Route::get('/forum/release', 'PagesController@home');
 Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten');
 
 
-Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');;
+Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');
 Route::post('admin/updateHS/{id}', ['as' => 'admin/updateHS', 'uses' => 'AdminController@updateHS']);
 Route::post('admin/bulk_updateHS', ['as' => 'admin/bulk_updateHS', 'uses' => 'AdminController@bulk_updateHS']);
 Route::post('admin/updateAK/{id}', ['as' => 'admin/updateAK', 'uses' => 'AdminController@updateAK']);
