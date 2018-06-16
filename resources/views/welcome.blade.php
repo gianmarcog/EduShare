@@ -8,6 +8,7 @@
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="item carousel-item active">
@@ -18,7 +19,14 @@
                 </div>
             </div>
             <div class="item carousel-item">
-                <img class="d-block img-fluid objectfit" src="/image/Berrys.jpg" alt="Second slide">
+                <img class="d-block img-fluid objectfit" src="/image/aktivitaeten/2.jpg" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Fußballplatz Konstanz</h1>
+                    <h5>Der Fußballplatz mitten in Konstanz. Der perfekte Ort um Tuniere zu halten und Tag und Nacht Fußball zu spielen</h5>
+                </div>
+            </div>
+            <div class="item carousel-item">
+                <img class="d-block img-fluid objectfit" src="/image/Berrys.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Berry's Konstanz</h1>
                     <h5>Create your own story. Wir sind da, um deine Nächte unvergesslich zu machen.</h5>
