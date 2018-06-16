@@ -209,4 +209,41 @@ class AdminController
         }
         return Redirect::back()->with('message', $message);
     }
+
+    public function deleteIdUS($id)
+    {
+        $user = User::where('id', '=', $id)->first();
+
+        if ($user->delete()) {
+            $message = "Account wurde erfolgreich gelöscht";
+            return Redirect::back()->with('message', $message);
+        }
+    }
+    public function deleteIdHS($id)
+    {
+        $hochschule = hochschulen::where('id', '=', $id)->first();
+
+        if ($hochschule->delete()) {
+            $message = "Hochschule wurde erfolgreich gelöscht";
+            return Redirect::back()->with('message', $message);
+        }
+    }
+    public function deleteIdAK($id)
+    {
+        $aktivitaet = aktivitaeten::where('id', '=', $id)->first();
+
+        if ($aktivitaet->delete()) {
+            $message = "Aktivität wurde erfolgreich gelöscht";
+            return Redirect::back()->with('message', $message);
+        }
+    }
+    public function deleteIdVL($id)
+    {
+        $vorlesung = vorlesungen::where('id', '=', $id)->first();
+
+        if ($vorlesung->delete()) {
+            $message = "Vorlesung wurde erfolgreich gelöscht";
+            return Redirect::back()->with('message', $message);
+        }
+    }
 }

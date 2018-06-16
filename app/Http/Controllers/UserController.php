@@ -12,6 +12,7 @@ use App\hochschulen;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\Facades\Image;
 
 //use Intervention\Image\Image;
@@ -50,7 +51,8 @@ class UserController
         return view('account');
     }
 
-    public function delete(){
+    public function delete()
+    {
         $user = User::find(Auth::user()->id);
 
         Auth::logout();
@@ -58,6 +60,8 @@ class UserController
         if ($user->delete()) {
 
             return redirect('/')->with('global', 'Dein Account wurde gelöscht!');
+        } else {
+            return Redirect::back();
         }
     }
 }

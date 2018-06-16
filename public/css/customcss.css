@@ -147,3 +147,7 @@ h5 {
 #bewertung {
     width: 100% !important;
 }
+
+#AdminDelete{
+    float: right;
+}

@@ -77,3 +77,7 @@ Route::post('admin/updateVL/{id}', ['as' => 'admin/updateVL', 'uses' => 'AdminCo
 Route::post('admin/bulk_updateVL', ['as' => 'admin/bulk_updateVL', 'uses' => 'AdminController@bulk_updateVL']);
 Route::post('admin/updateUS/{id}', ['as' => 'admin/updateUS', 'uses' => 'AdminController@updateUS']);
 Route::post('admin/bulk_updateUS', ['as' => 'admin/bulk_updateUS', 'uses' => 'AdminController@bulk_updateUS']);
+Route::get('admin/deleteUS/{id}','AdminController@deleteIdUS');
+Route::get('admin/deleteHS/{id}','AdminController@deleteIdHS');
+Route::get('admin/deleteAK/{id}','AdminController@deleteIdAK');
+Route::get('admin/deleteVL/{id}','AdminController@deleteIdVL');
