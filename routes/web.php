@@ -59,7 +59,7 @@ Route::get('/search', function () {
     return view('searchresults');
 })->name('search');
 
-Route::group(['prefix' => 'question'], function () {
+Route::group(['prefix' => 'question', 'middleware' => 'auth'], function () {
 
     Route::get('post', [
         'as' => 'get_post',
