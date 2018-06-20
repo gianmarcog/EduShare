@@ -4,7 +4,6 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 class Post extends Model
 {
-    use Sluggable;
 
     protected $table = 'posts';
     protected $fillable = ['category_id', 'title','body','user_id'];

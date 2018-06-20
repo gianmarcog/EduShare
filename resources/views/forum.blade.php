@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div>
-                    {!! Form::open(['id'=> 'post-question-form']) !!}
+                    {!! Form::open (['id'=> 'post-question-form']) !!}
 
                     {!! Form::label('title','Title') !!}
                     {!! Form::text('title',null, ['id' => 'title', 'class'=>'form-control','placeholder'=>'title','required']) !!}

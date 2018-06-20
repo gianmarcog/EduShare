@@ -62,6 +62,21 @@ Route::group(['prefix' => 'question'], function () {
         'as' => 'post_question',
         'uses' => 'ForumController@postQuestion'
     ]);
+
+    Route::delete('post', [
+        'as' => 'delete_question',
+        'uses' => 'ForumController@deleteQuestion'
+    ]);
+
+    Route::post('reply', [
+        'as' => 'save_reply',
+        'uses' => 'ForumController@saveReply'
+    ]);
+
+    Route::delete('reply', [
+        'as' => 'delete_reply',
+        'uses' => 'ForumController@deleteReply'
+    ]);
 });
 Route::get('/forum/release', 'PagesController@home');
 

@@ -20,11 +20,23 @@
                             @endif
                 </ul>
                     </div>
+
+
+                    {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
+
+                    {!! Form::hidden('post_id', $post->id) !!}
+                    <br/>
+                    {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
+
+                    {!! Form::close() !!}
+
                 </div>
             </div>
         @empty
             <p>No posts found</p>
         @endforelse
+
+        {!! $posts-> appends(Request::all())->render() !!}
     </div>
 
 @endsection

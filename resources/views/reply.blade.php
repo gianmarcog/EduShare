@@ -27,10 +27,29 @@
                     </div>
                     {{$reply->created_at}}
                 </div>
+
+                {!! Form::open(['route'=> 'delete_reply', 'id' => 'delete-reply-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
+
+                {!! Form::hidden('reply_id', $reply->id) !!}
+                <br/>
+                {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
+
+                {!! Form::close() !!}
             </div>
         @empty
             <p>Be the first to reply</p>
         @endforelse
+
+        {!! Form::open(['route'=> 'save_reply', 'id' => 'post-question-form']) !!}
+
+        {!! Form::hidden('id',$post -> id) !!}
+
+        {!! Form::textarea('body',null, ['id' => 'body','class'=>'form-control','placeholder' => 'Hello my Friends','required']) !!}
+        <br/>
+        {!! Form::button('Reply', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
+
+        {!! Form::close() !!}
+
     </div>
 
 @endsection
