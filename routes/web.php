@@ -17,7 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('uebersicht');
 
-Route::get('/account', 'UserController@index')->name('account');
+Route::get('/kontakt', function () {
+    return view('kontakt');
+})->name('kontakt');
+
+Route::get('/impressum', function () {
+    return view('impressum');
+})->name('impressum');
+
+Route::get('/account', 'UserController@index')->name('account')->middleware('auth');
 
 Route::get('/account/delete','UserController@delete')->name('deleteAccount');
 
@@ -83,7 +91,7 @@ Route::get('/forum/release', 'PagesController@home');
 Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten');
 
 
-Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');;
+Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');
 Route::post('admin/updateHS/{id}', ['as' => 'admin/updateHS', 'uses' => 'AdminController@updateHS']);
 Route::post('admin/bulk_updateHS', ['as' => 'admin/bulk_updateHS', 'uses' => 'AdminController@bulk_updateHS']);
 Route::post('admin/updateAK/{id}', ['as' => 'admin/updateAK', 'uses' => 'AdminController@updateAK']);
@@ -92,3 +100,7 @@ Route::post('admin/updateVL/{id}', ['as' => 'admin/updateVL', 'uses' => 'AdminCo
 Route::post('admin/bulk_updateVL', ['as' => 'admin/bulk_updateVL', 'uses' => 'AdminController@bulk_updateVL']);
 Route::post('admin/updateUS/{id}', ['as' => 'admin/updateUS', 'uses' => 'AdminController@updateUS']);
 Route::post('admin/bulk_updateUS', ['as' => 'admin/bulk_updateUS', 'uses' => 'AdminController@bulk_updateUS']);
+Route::get('admin/deleteUS/{id}','AdminController@deleteIdUS');
+Route::get('admin/deleteHS/{id}','AdminController@deleteIdHS');
+Route::get('admin/deleteAK/{id}','AdminController@deleteIdAK');
+Route::get('admin/deleteVL/{id}','AdminController@deleteIdVL');

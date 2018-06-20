@@ -41,6 +41,7 @@
                                                       value="{{ $bewertungHochschule->bewertung }}"
                                                       disabled
                                                       @endif
+                                                      min="0" max="100"
                                                       required></td>
                             @if ($errors->has('bewertungH'))
                                 <span class="help-block">
@@ -100,6 +101,7 @@
                                                       @endforeach
                                                       @endif
                                                       placeholder="nicht bewertet"
+                                                      min="0" max="100"
                                                       required>
                             </td>
                             @if ($errors->has('bewertungV'))
@@ -166,6 +168,7 @@
                                                       @endforeach
                                                       @endif
                                                       placeholder="nicht bewertet"
+                                                      min="0" max="100"
                                                       required>
                                 @if ($errors->has('bewertungA'))
                                     <span class="help-block">

@@ -12,6 +12,8 @@ use App\hochschulen;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
 //use Intervention\Image\Image;
@@ -42,7 +44,13 @@ class UserController
         if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            if(!Storage::disk('public_uploads')->putFileAs('/', $avatar, $filename)) {
+                return false;
+            }
+
+            /*
             Image::make($avatar)->resize(300, 300)->save(public_path('/image/ProfilePics/' . $filename));
+            */
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();
@@ -50,7 +58,8 @@ class UserController
         return view('account');
     }
 
-    public function delete(){
+    public function delete()
+    {
         $user = User::find(Auth::user()->id);
 
         Auth::logout();
@@ -58,6 +67,8 @@ class UserController
         if ($user->delete()) {
 
             return redirect('/')->with('global', 'Dein Account wurde gelöscht!');
+        } else {
+            return Redirect::back();
         }
     }
 }

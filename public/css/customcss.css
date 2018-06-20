@@ -143,3 +143,17 @@ h5 {
 #admintable {
     color: black;
 }
+
+#bewertung {
+    width: 100% !important;
+}
+
+#AdminDelete{
+    float: right;
+}
+
+#gmeg_map_canvas{
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}

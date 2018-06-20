@@ -39,11 +39,13 @@
                 <hr>
                 <table class="table table-striped top-buffer">
                     @foreach($user as $u)
+                        <form id="formUS{{$u->id}}" action="{{ url('/admin/deleteUS/'.$u->id.'') }}"></form>
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$u->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="email"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="hochschule"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
+                            <td><input id="AdminDelete" form="formUS{{$u->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diesen Account unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
                 </table>
@@ -68,11 +70,13 @@
                 <hr>
                 <table class="table table-striped top-buffer">
                     @foreach($hochschulen as $hochschule)
+                        <form id="formHS{{$hochschule->id}}" action="{{ url('/admin/deleteHS/'.$hochschule->id.'') }}"></form>
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$hochschule->id}}" /></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="name">{{$hochschule->name}}</p></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="value">{{$hochschule->standort}}</p></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="date">{{$hochschule->url}}</p></td>
+                            <td><input id="AdminDelete" form="formHS{{$hochschule->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Hochschule unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
                 </table>
@@ -99,10 +103,12 @@
                 <hr>
                 <table class="table table-striped top-buffer">
                     @foreach($aktivitaeten as $aktivitaet)
+                        <form id="formAK{{$aktivitaet->id}}" action="{{ url('/admin/deleteAK/'.$aktivitaet->id.'') }}"></form>
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$aktivitaet->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="name">{{$aktivitaet->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="name">{{$aktivitaet->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
+                            <td><input id="AdminDelete" form="formAK{{$aktivitaet->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Aktivität unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
                 </table>
@@ -129,10 +135,12 @@
                 <hr>
                 <table class="table table-striped top-buffer">
                     @foreach($vorlesungen as $vorlesung)
+                        <form id="formVL{{$vorlesung->id}}" action="{{ url('/admin/deleteVL/'.$vorlesung->id.'') }}"></form>
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$vorlesung->id}}" /></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="name">{{$vorlesung->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="name">{{$vorlesung->name}}</p></td>
+                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
+                            <td><input id="AdminDelete" form="formVL{{$vorlesung->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Vorlesung unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
                 </table>
@@ -144,27 +152,4 @@
 
 
     </div>
-@endsection
-
-@section('scripts')
-    <script>
-        $.fn.editable.defaults.mode = 'inline';
-        $(document).ready(function() {
-            $('.testEdit').editable({
-                params: function(params) {
-                    // add additional params from data-attributes of trigger element
-                    params.name = $(this).editable().data('name');
-                    return params;
-                },
-                error: function(response, newValue) {
-                    if(response.status === 500) {
-                        return 'Server error. Check entered data.';
-                    } else {
-                        return response.responseText;
-                        // return "Error.";
-                    }
-                }
-            });
-        });
-    </script>
 @endsection

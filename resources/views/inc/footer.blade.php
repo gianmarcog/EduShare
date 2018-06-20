@@ -13,13 +13,10 @@
                 <h5 class="text-uppercase">Links</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="/Impressum/impressum.html">Impressum</a>
+                        <a href="{{route('impressum')}}">Impressum und Datenschutz</a>
                     </li>
                     <li>
-                        <a href="mailto:borner.rene@gmail.com">Kontakt</a>
-                    </li>
-                    <li>
-                        <a href="/Rechtliches/rechtliches.html">Rechtliches</a>
+                        <a href="{{route('kontakt')}}">Kontakt</a>
                     </li>
                 </ul>
                 <label for="countries"></label><select name="countries" id="countries" style="width:150px;">
