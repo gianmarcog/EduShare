@@ -22,7 +22,7 @@
                 <img class="d-block img-fluid objectfit" src="/image/aktivitaeten/2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Fußballplatz Konstanz</h1>
-                    <h5>Der Fußballplatz mitten in Konstanz. Der perfekte Ort um Tuniere zu veranstalten und Tag und Nacht Fußball zu spielen</h5>
+                    <h5>Der Fußballplatz mitten in Konstanz. Der perfekte Ort um Turniere zu veranstalten und Tag und Nacht Fußball zu spielen</h5>
                 </div>
             </div>
             <div class="item carousel-item">
