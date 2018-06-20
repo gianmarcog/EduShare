@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
     <div class="card">
         @forelse($posts as $post)
             <div class="card-header">
@@ -21,12 +23,13 @@
                 </ul>
                     </div>
 
-
                     {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
 
                     {!! Form::hidden('post_id', $post->id) !!}
                     <br/>
+                    @if(Auth::user()->id === $post->user_id)
                     {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
+                    @endif
 
                     {!! Form::close() !!}
 
@@ -37,6 +40,9 @@
         @endforelse
 
         {!! $posts-> appends(Request::all())->render() !!}
+    </div>
+            </div>
+        </div>
     </div>
 
 @endsection

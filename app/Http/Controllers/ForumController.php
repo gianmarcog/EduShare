@@ -38,18 +38,6 @@ class ForumController extends Controller
         return redirect('/forum/release');
     }
 
-    public function viewPost($slug){
-
-        try
-        {
-        $post = Post::where('slug', '=', $slug)->first();
-
-        return redirect()->route('reply',compact('post'),[$post->slug]);
-        }
-        catch (ModelNotFoundException $ex){
-            return redirect('/');
-        }
-    }
     public function saveReply(CreateReplyRequest $request){
 
         $post=Post::where('id', '=', $request->get('id'))->first();

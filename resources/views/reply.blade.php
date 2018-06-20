@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
+    <div class="container">
+        <div class="row">
+            <div class="col-12 ml-3">
     <div class="card">
             <div class="card-header">
                 <div class="card">
@@ -23,7 +26,7 @@
                 <div class="card">
                     <div class="card-body">
                         <p class="text-right">By: {{$reply->user->name}}</p>
-                        <p>Das {{$reply->body}} </p>
+                        <p>{{$reply->body}} </p>
                     </div>
                     {{$reply->created_at}}
                 </div>
@@ -32,7 +35,10 @@
 
                 {!! Form::hidden('reply_id', $reply->id) !!}
                 <br/>
+
+                @if(Auth::user()->id === $reply->user_id)
                 {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
+                @endif
 
                 {!! Form::close() !!}
             </div>
@@ -42,14 +48,19 @@
 
         {!! Form::open(['route'=> 'save_reply', 'id' => 'post-question-form']) !!}
 
-        {!! Form::hidden('id',$post -> id) !!}
+        {!! Form::hidden('id',$post->id) !!}
 
         {!! Form::textarea('body',null, ['id' => 'body','class'=>'form-control','placeholder' => 'Hello my Friends','required']) !!}
         <br/>
+
         {!! Form::button('Reply', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
+
 
         {!! Form::close() !!}
 
+    </div>
+            </div>
+        </div>
     </div>
 
 @endsection

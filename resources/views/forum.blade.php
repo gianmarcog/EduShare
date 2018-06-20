@@ -20,10 +20,12 @@
                     {!! Form::label('body','Body') !!}
                     {!! Form::textarea('body',null, ['id' => 'body','class'=>'form-control','placeholder' => 'Bitte geben Sie Ihren Text ein','required']) !!}
                     <br/>
+
                     {!! Form::button('Post', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
 
                     {!! Form::close() !!}
                 </div>
+
             </div>
         </div>
     </div>
