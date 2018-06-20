@@ -3,44 +3,49 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-    <div class="card">
-        @forelse($posts as $post)
-            <div class="card-header">
                 <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-heading"><a href="/forum/antworten/{{$post->id}}">{{$post->title}}</a>  </h4>
-                    <p class="text-right">By: {{$post->user->name}}</p>
-                <p>{{$post->body}}</p>
-                    <ul class="list-inline list-unstyled">
-                    <li><span><i class="glyphicon glyphicon-calendar"> </i>
+                    @forelse($posts as $post)
+                        <div class="card-header">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-heading"><a
+                                                href="/forum/antworten/{{$post->id}}">{{$post->title}}</a></h4>
+                                    <p class="text-right">By: {{$post->user->name}}</p>
+                                    <p>{{$post->body}}</p>
+                                    <ul class="list-inline list-unstyled">
+                                        <li><span><i class="glyphicon glyphicon-calendar"> </i>
 
-                        @if($post->replies->count() > 0)
-                          <li> {{$post->created_at->diffForHumans()}} </span> | {{$post->replies->count()}} comment(s)</li>
+                                        @if($post->replies->count() > 0)
+                                            <li> {{$post->created_at->diffForHumans()}} </span>
+                                                | {{$post->replies->count()}} comment(s)
+                                            </li>
 
-                            @else()
-                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte du als erster </li>
-                            @endif
-                </ul>
-                    </div>
+                                        @else()
+                                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte du als
+                                                erster
+                                            </li>
+                                        @endif
+                                    </ul>
+                                </div>
 
-                    {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
+                                {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
 
-                    {!! Form::hidden('post_id', $post->id) !!}
-                    <br/>
-                    @if(Auth::user()->id === $post->user_id)
-                    {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
-                    @endif
+                                {!! Form::hidden('post_id', $post->id) !!}
+                                <br/>
+                                @if(Auth::user()->id === $post->user_id)
+                                    {!! Form::button('Delete', ['class' => 'btn btn-danger mb-2 mr-2', 'type' =>'submit']) !!}
+                                @endif
 
-                    {!! Form::close() !!}
+                                {!! Form::close() !!}
 
+                            </div>
+                        </div>
+                    @empty
+                        <p>No posts found</p>
+                    @endforelse
+
+                    {!! $posts-> appends(Request::all())->render() !!}
                 </div>
-            </div>
-        @empty
-            <p>No posts found</p>
-        @endforelse
-
-        {!! $posts-> appends(Request::all())->render() !!}
-    </div>
             </div>
         </div>
     </div>
