@@ -86,9 +86,9 @@ Route::group(['prefix' => 'question', 'middleware' => 'auth'], function () {
         'uses' => 'ForumController@deleteReply'
     ]);
 });
-Route::get('/forum/release', 'PagesController@home')->name('release');
+Route::get('/forum/release', 'PagesController@home')->name('release')->middleware('auth');
 
-Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten');
+Route::get('/forum/antworten/{id}','AntwortenControllers@show')->name('antworten')->middleware('auth');
 
 
 Route::get('admin', ['uses' => 'AdminController@index'])->middleware('admin');
