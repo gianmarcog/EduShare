@@ -50,8 +50,7 @@
                     @empty
                         <p>No posts found</p>
                     @endforelse
-
-                    {!! $posts-> appends(Request::all())->render() !!}
+                    {{ $posts->links() }}
                 </div>
             </div>
         </div>
