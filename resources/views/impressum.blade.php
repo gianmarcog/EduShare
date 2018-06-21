@@ -5,6 +5,7 @@
         <div class="row">
             <div class="col-12 top-buffer">
                 <h1>Impressum</h1>
+                <hr>
                 <h2>Angaben gem&auml;&szlig; &sect; 5 TMG:</h2>
                 <p>René Borner
                     <br/> Schürmann-Horster-Weg
@@ -14,6 +15,7 @@
                 <p>Diese Plattform dient keinem gewerblichen Nutzen, sondern stellt lediglich ein Projekt für eine Vorlesung dar.</p>
                 <p>Forum, Aktivitäten und Bewerten Bilder mit allen Nutzungsrechten von Pixabay erhalten.</p>
                 <h1>Datenschutzerkl&auml;rung</h1>
+                <hr>
                 <h2>Datenschutz</h2>
                 <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln
                     Ihre
