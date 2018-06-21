@@ -43,8 +43,8 @@
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$u->id}}" /></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="name">{{$u->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="email"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="hochschule"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="email"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="value">{{$u->email}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="hochschule"  data-url="{{route('admin/updateUS', ['id'=>$u->id])}}" data-pk="{{$u->id}}" data-title="change" data-name="date">{{$u->hochschule}}</p></td>
                             <td><input id="AdminDelete" form="formUS{{$u->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diesen Account unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
@@ -74,8 +74,8 @@
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$hochschule->id}}" /></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="name">{{$hochschule->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="value">{{$hochschule->standort}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="date">{{$hochschule->url}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="value"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="value">{{$hochschule->standort}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="date"  data-url="{{route('admin/updateHS', ['id'=>$hochschule->id])}}" data-pk="{{$hochschule->id}}" data-title="change" data-name="date">{{$hochschule->url}}</p></td>
                             <td><input id="AdminDelete" form="formHS{{$hochschule->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Hochschule unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
@@ -107,7 +107,7 @@
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$aktivitaet->id}}" /></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="name">{{$aktivitaet->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="value"  data-url="{{route('admin/updateAK', ['id'=>$aktivitaet->id])}}" data-pk="{{$aktivitaet->id}}" data-title="change" data-name="value">{{$aktivitaet->standort}}</p></td>
                             <td><input id="AdminDelete" form="formAK{{$aktivitaet->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Aktivität unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
@@ -139,7 +139,7 @@
                         <tr>
                             <td><td width="10px"><input type="checkbox" name="ids_to_edit[]" value="{{$vorlesung->id}}" /></td>
                             <td><p href="#" class="testEdit" data-type="text" data-column="name" data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="name">{{$vorlesung->name}}</p></td>
-                            <td><p href="#" class="testEdit" data-type="text" data-column="value"  data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
+                            <td><p href="#" class="testEdit notmobile" data-type="text" data-column="value"  data-url="{{route('admin/updateVL', ['id'=>$vorlesung->id])}}" data-pk="{{$vorlesung->id}}" data-title="change" data-name="value">{{$vorlesung->professor}}</p></td>
                             <td><input id="AdminDelete" form="formVL{{$vorlesung->id}}" class="btn btn-danger" type="submit" value="Löschen" onclick="return confirm('Bist du sicher dass du diese Vorlesung unwiderruflich löschen willst?')"></td>
                         </tr>
                     @endforeach
