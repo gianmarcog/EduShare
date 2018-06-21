@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    @forelse($posts as $post)
+                    @foreach($posts as $post)
                         <div class="card-header">
                             <div class="card">
                                 <div class="card-body">
@@ -47,10 +47,12 @@
 
                             </div>
                         </div>
-                    @empty
-                        <p>No posts found</p>
-                    @endforelse
-                    {{ $posts->links() }}
+                    @endforeach
+                    {{ $posts->render() }}
+                    <script>
+                        $('.pagination > li').addClass(".page-item");
+                        $('.pagination > a').addClass(".page-link");
+                    </script>
                 </div>
             </div>
         </div>

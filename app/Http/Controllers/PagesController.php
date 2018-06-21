@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 class PagesController extends Controller
 {
     public function home(){
-        $posts = Post::orderBy('created_at','DESC')->paginate(5);
+        $posts = Post::paginate(5);
         return view('forumRelease')->with('posts',$posts);
     }
 }
