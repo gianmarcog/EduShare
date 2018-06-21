@@ -39,12 +39,7 @@
 <script src="/js/cookies.js"></script>
 <script src="/js/loading-bar.js"></script>
 <script src="/js/liveSearch.js"></script>
-
-<script>
-    $('.pagination li').addClass("page-item");
-    $('.pagination a').addClass("page-link");
-    $('.pagination span').addClass("page-link");
-</script>
+<script src="/js/pageNumberDesign.js"></script>
 @yield('scripts')
 
 </body>
