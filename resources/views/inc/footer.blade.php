@@ -6,7 +6,7 @@
             <div class="col-md-6 mx-auto">
                 <h5 class="text-uppercase">EduShare</h5>
                 <p>Die EduShare Plattform ist ein Projekt von Gianmarco Giretti und René Borner für die Web-Tech
-                    Vorlesung</p>
+                    Vorlesung.</p>
             </div>
 
             <div class="col-md-4 ">

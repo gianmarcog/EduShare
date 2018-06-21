@@ -14,16 +14,8 @@
                    href="{{route('uebersicht')}}">Übersicht</a>
             </li>
             <li class="nav-item">
-                <div class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Forum
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="ml-2 nav-link {{ (\Request::route()->getName() == 'forum') ? 'active' : '' }}"
-                           href="{{ route('release') }}">Beiträge</a>
-                    </div>
-                </div>
+                <a class="nav-link {{ (\Request::route()->getName() == 'release') ? 'active' : '' }}"
+                   href="{{route('release')}}">Forum</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ (\Request::route()->getName() == 'bewerten') ? 'active' : '' }}"

@@ -4,20 +4,20 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div>
+                <div class="top-buffer">
                     {!! Form::open (['id'=> 'post-question-form']) !!}
 
-                    {!! Form::label('title','Title') !!}
+                    {!! Form::label('title','Titel') !!}
                     {!! Form::text('title',null, ['id' => 'title', 'class'=>'form-control','placeholder'=>'title','required']) !!}
                     <br/>
-                    {!! Form::label('category','Category') !!}
+                    {!! Form::label('category','Kategorie') !!}
                     <select name="category" class="form-control">
                         @foreach($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
                     <br/>
-                    {!! Form::label('body','Body') !!}
+                    {!! Form::label('body','Text') !!}
                     {!! Form::textarea('body',null, ['id' => 'body','class'=>'form-control','placeholder' => 'Bitte geben Sie Ihren Text ein','required']) !!}
                     <br/>
 
