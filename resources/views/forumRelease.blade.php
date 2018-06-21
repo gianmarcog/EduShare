@@ -28,9 +28,7 @@
                                             </li>
 
                                         @else()
-                                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte du als
-                                                erster
-                                            </li>
+                                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte als erster</li>
                                         @endif
                                     </ul>
                                 </div>

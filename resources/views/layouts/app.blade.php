@@ -38,7 +38,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script src="/js/cookies.js"></script>
 <script src="/js/loading-bar.js"></script>
-<script src="/js/liveSearch.js"></script>
+<script src="/js/ajaxJS.js"></script>
 <script src="/js/pageNumberDesign.js"></script>
 @yield('scripts')
 

@@ -21,7 +21,6 @@ class CreatePostRequest extends FormRequest
     {
         return [
             'title' => 'required|max:30',
-            'category' => 'required',
             'body' => 'required|min:10'
         ];
     }
