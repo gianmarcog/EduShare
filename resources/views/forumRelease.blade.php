@@ -40,7 +40,7 @@
                                     {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
 
                                     {!! Form::hidden('post_id', $post->id) !!}
-                                    @if(Auth::user()->id === $post->user_id)
+                                    @if(Auth::user()->id === $post->user_id || $role->role === 1)
                                         {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
                                     @endif
 

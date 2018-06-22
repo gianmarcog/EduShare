@@ -10,11 +10,11 @@
                             @foreach($posts as $post)
                                 <div class="card-body">
                                     <h4 class="card-heading">{{$post->title}}</h4>
-                                    <p class="text-right">By: {{$post->user->name}}</p>
+                                    <p class="text-right">Von: {{$post->user->name}}</p>
                                     <p> {{$post->body}} </p>
                                     <ul class="list-inline list-unstyled">
                                         <li><span><i class="glyphicon glyphicon-calendar"> </i>
-                                        <li> {{$post->created_at->diffForHumans()}} </span> | comment(s)</li>
+                                        <li> {{$post->created_at->diffForHumans()}} </span> | Antwort(en)</li>
 
                                     </ul>
                                 </div>
@@ -36,14 +36,13 @@
                             {!! Form::hidden('reply_id', $reply->id) !!}
                             <br/>
 
-                            @if(Auth::user()->id === $reply->user_id)
+                            @if(Auth::user()->id === $reply->user_id || $role->role === 1)
                                 {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
                             @endif
 
                             {!! Form::close() !!}
                         </div>
                     @empty
-                        <p class="ml-2">Antworte als erster</p>
                     @endforelse
 
                     {!! Form::open(['route'=> 'save_reply', 'id' => 'post-question-form']) !!}
