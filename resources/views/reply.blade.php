@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="container">
-        <div class="row">
+        <div class="row top-buffer">
             <div class="col-12 ml-3">
                 <div class="card">
                     <div class="card-header">
@@ -11,7 +11,7 @@
                                 <div class="card-body">
                                     <h4 class="card-heading">{{$post->title}}</h4>
                                     <p class="text-right">By: {{$post->user->name}}</p>
-                                    <p>Das {{$post->body}} </p>
+                                    <p> {{$post->body}} </p>
                                     <ul class="list-inline list-unstyled">
                                         <li><span><i class="glyphicon glyphicon-calendar"> </i>
                                         <li> {{$post->created_at->diffForHumans()}} </span> | comment(s)</li>
@@ -25,7 +25,7 @@
                         <div class="card-header">
                             <div class="card">
                                 <div class="card-body">
-                                    <p class="text-right">By: {{$reply->user->name}}</p>
+                                    <p class="text-right">Von: {{$reply->user->name}}</p>
                                     <p>{{$reply->body}} </p>
                                     <p>{{$reply->created_at}}</p>
                                 </div>
@@ -43,7 +43,7 @@
                             {!! Form::close() !!}
                         </div>
                     @empty
-                        <p>Be the first to reply</p>
+                        <p class="ml-2">Antworte als erster</p>
                     @endforelse
 
                     {!! Form::open(['route'=> 'save_reply', 'id' => 'post-question-form']) !!}
@@ -53,7 +53,7 @@
                     {!! Form::textarea('body',null, ['id' => 'body','class'=>'form-control','placeholder' => 'Schreibe hier deine Antwort','required']) !!}
                     <br/>
 
-                    {!! Form::button('Reply', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
+                    {!! Form::button('Antworten', ['class' => 'btn btn-lg btn-primary btn-block', 'type' =>'submit']) !!}
 
 
                     {!! Form::close() !!}
