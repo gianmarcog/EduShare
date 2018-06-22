@@ -87,7 +87,7 @@
                         <h3>Derzeit erlauben wir keine neuen Accounts!</h3>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary"disabled>
+                                <button type="submit" class="btn btn-primary">
                                     Registrieren
                                 </button>
                             </div>
