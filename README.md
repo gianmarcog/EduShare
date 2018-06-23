@@ -55,7 +55,7 @@ Für jede View existiert mindestens eine zugehörige Route, diese leitet, wenn e
 ### 2.3 Zweistufiger Geschäftsprozess (Session Handling)
 Den zweistufigen Geschäftsprozess haben wir im Forum, bei einer neuen Beitrags-Erstellung, umgesetzt.
 Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.
-Bei der Azswahl der Kategorie wird eine Post Request an den Controller geschickt, dieser speichert dann die Kategorie in der Session ab.
+Bei der Auswahl der Kategorie wird eine Post Request an den Controller geschickt, dieser speichert dann die Kategorie in der Session ab.
 ```php
 $request->session()->put("category",$request->get('category'));
 ```
