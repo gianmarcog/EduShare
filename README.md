@@ -21,26 +21,26 @@
 ---
 ### 1.1 Use Cases
 
-**Angemeldeter Student**
-Als Student kann man Hochschulen und Vorlesungen bewerten, sich über Aktivitäten in dem jeweiligem Studienort informieren und diese ebenso bewerten. 
+**Angemeldeter Student**\
+Als Student kann man Hochschulen und Vorlesungen bewerten, sich über Aktivitäten in dem jeweiligem Studienort informieren und diese ebenso bewerten.\
 Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.
 
-**Nicht angemeldete Nutzer**
-Nicht angemeldete Nutzer können z. B. Schüler bzw. Studieninteressierte sein, welche sich dann Dank der EduShare Plattform über verschiedene Hochschulen und die Aktivitäten des Studienortes informieren können.
+**Nicht angemeldete Nutzer**\
+Nicht angemeldete Nutzer können z. B. Schüler bzw. Studieninteressierte sein, welche sich dann Dank der EduShare Plattform über verschiedene Hochschulen und die Aktivitäten des Studienortes informieren können.\
 Durch das Ranking System können Nutzer direkt einen Überblick über die Vorlesungen und Aktivitäten erhalten.
 
-**Administrator**
-Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen. 
+**Administrator**\
+Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen.\
 Außerdem dient er als Moderator in dem Forum und kann daher das Recht alle Beiträge zu löschen.
 
 ### 1.2 Wow-Faktor
 
-Die EduShare Plattform sticht aus der Menge der Internet Plattformen hervor, indem sie alle Bedürfnisse für Studenten und Studieninteressierte erfüllt.
+Die EduShare Plattform sticht aus der Menge der Internet Plattformen hervor, indem sie alle Bedürfnisse für Studenten und Studieninteressierte erfüllt.\
 Besonders ist vor allem das umfangreiche Ranking System, das Forum und die universelle, in Kategorien aufgeteilte, Suche.
 
 ### 1.3 Visual Design
 
-Die EduShare Plattform nutzt ein modernes und einheitliches Design, welches es ermöglicht schnell und übersichtlich die gewünschten Funktionen zu erreichen.
+Die EduShare Plattform nutzt ein modernes und einheitliches Design, welches es ermöglicht schnell und übersichtlich die gewünschten Funktionen zu erreichen.\
 Alle Seiten der Plattform sind durch das responsive Design mit jeder Art von Gerät gleich gut benutzbar.
 
 ---
@@ -54,7 +54,7 @@ Für jede View existiert mindestens eine zugehörige Route, diese leitet, wenn e
 
 ### 2.3 Zweistufiger Geschäftsprozess (Session Handling)
 Den zweistufigen Geschäftsprozess haben wir im Forum, bei einer neuen Beitrags-Erstellung, umgesetzt.
-Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.
+Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.\
 Bei der Auswahl der Kategorie wird eine Post Request an den Controller geschickt, dieser speichert dann die Kategorie in der Session ab.
 ```php
 $request->session()->put("category",$request->get('category'));
@@ -88,7 +88,7 @@ $('#search').on('keydown', function () {
     })
 });
 ```
-Der Controller sucht dann in der Datenbank nach dem Such String und liefert die Ergebnisse als HTML zurück. 
+Der Controller sucht dann in der Datenbank nach dem Such String und liefert die Ergebnisse als HTML zurück.\
 Außerdem ist es möglich durch einen ausgewählten Parmeter nur bestimmte Ergebnisse, wie z. B. Hochschulen, zu erhalten.
 
 ### 2.5 LaravelMix
@@ -110,25 +110,25 @@ Das Nutzerpasswort wird auch in einen Hash umgewandelt und nur so in der Datenba
 
 ### 2.8 Sonstige technische Umsetzungen
 
-**Bewerten Funktionalität**
-Jeder angemeldete Nutzer kann für seine Hochschule, die Vorlesungen der Hochschule und die Aktivitäten seines Studienortes Bewertungen abgeben.
+**Bewerten Funktionalität**\
+Jeder angemeldete Nutzer kann für seine Hochschule, die Vorlesungen der Hochschule und die Aktivitäten seines Studienortes Bewertungen abgeben.\
 Nachdem er eine Bewertung abgegeben hat kann diese nicht mehr verändert werden und wird automatisch mit allen bisher abgegebenen Bewertungen für diese Entität verrechnet und die neue Durchschnittsbewertung wird automatisch in den Datenbankeintrag der Entität hinzugefügt.
 
-**Ranking**
+**Ranking**\
 In der Ranking Ansicht sind alle vorhandenen Hochschulen, Aktivitäten und Vorlesungen mit ihrer Bewertung gelistet.
 Alle Nutzer (auch nicht angemeldete) können sich so über Hochschulen etc. informieren und kommen dann jeweils auf eine Übersichtsseite.
 Auf den Hochschul Übersichtsseiten werden auch die zugehörigen Vorlesungen mit ihrer Bewertung angezeigt.
 
-**Administrator Interface**
+**Administrator Interface**\
 Auf das Administrator Interface können nur Nutzer zugreifen, welche in der Rollen Tabelle als Administrator hinterlegt sind.
 Im Administrator Interface können alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeitet und gelöscht werden. 
-Wenn ein Nutzer gelöscht wird, werden auch automatisch alle Forums Beiträge und Antworten von diesem Nuter gelöscht. Dies haben wir mit den Model Relationships und Foreign Keys mit dem Constraint onDelete Cascade umgesetzt.
+Wenn ein Nutzer gelöscht wird, werden auch automatisch alle Forums Beiträge und Antworten von diesem Nuter gelöscht. Dies haben wir mit den Model Relationships und Foreign Keys mit dem Constraint onDelete Cascade umgesetzt.\
 Weiterhin haben alle Administratoren das Recht, alle Forums Beiträge zu löschen.
 Die Kontrolle ob jemand ein Administrator ist und somit auf eine Route zugreifen darf, findet über die Middleware AdminCheck statt.
 
-**Forum**
+**Forum**\
 Im Forum können angemeldete Nutzer Beiträge erstellen und auf Beiträge Antworten.
-Die Beiträge sind mit den Antworten über eine Model Relationship und den zugehörigen Foreign Keys verknüpft.
+Die Beiträge sind mit den Antworten über eine Model Relationship und den zugehörigen Foreign Keys verknüpft.\
 Beim löschen eines Beitrages werden automatisch auch alle Antworten zu diesem Post über den Constraint onDelete Cascade mitgelöscht.
 Jeder Beitrag hat einen Zeitstempel welcher mit 'diffforhumans' in eine verständliche zeitliche Differenz umgewandelt wird.
 Zu jedem Beitrag wird außerdem der Ersteller, die Anzahl der Antworten und die Kategorie des Posts angezeigt.
