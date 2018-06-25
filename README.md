@@ -21,19 +21,20 @@
 ---
 ### 1.1 Use Cases
 
-**Angemeldeter Student**\
-Als Student kann man Hochschulen und Vorlesungen bewerten, sich über Aktivitäten in dem jeweiligem Studienort informieren und diese ebenso bewerten.\
-Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.\
-Nach der Anmeldung können Account Daten noch bearbeitet werden und ein neues Profilbild hinzugefügt werden. Außerdem ist es möglich den eigenen Account inklusiv aller Forum Beiträge
-zu löschen.
-
 **Nicht angemeldete Nutzer**\
-Nicht angemeldete Nutzer können z. B. Schüler bzw. Studieninteressierte sein, welche sich dann Dank der EduShare Plattform über verschiedene Hochschulen und die Aktivitäten des Studienortes informieren können.\
-Durch das Ranking System können Nutzer direkt einen Überblick über die Vorlesungen und Aktivitäten erhalten.
+Nicht angemeldete Nutzer können z. B. Schüler sein, welche sich dann Dank der EduShare Plattform in der Ranking Rubrik über verschiedene Hochschulen, Vorlesungen und Aktivitäten des Studienortes, inklusiv Bewertung, informieren können.\
+Weiterhin gibt es zu jeder Hochschule und Aktivität eine Informationsseite, in der immer ein Bild mit Beschreibung hinterlegt ist und auch die Bewertung nochmal graphisch dargestellt wird. Bei Hochschulen ist auf der Informationsseite zusätzlich der Standort auf Google Maps und die angebotenen Vorlesungen mit Bewertung hinterlegt.\
+Außerdem können Sie natürlich die universelle Suche mit Filterfunktion benutzen, um z.B. alle Aktivitäten eines Ortes zu sehen.
+
+**Angemeldeter Student**\
+Als angemeldeter Student hat man alle Funktionen, die auch ein nicht angemeldeter Nutzer hat, allerdings auch noch einige Funktionen die exklusiv für angemeldete Studenten vorhanden sind.\
+Unter der Bewerten Rubrik können die eigene Hochschule inkl. den Vorlesungen und die Aktivitäten des Studienortes in Prozent einmalig bewertet werden.
+Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.\
+Nach der Anmeldung können Account Daten noch bearbeitet werden und ein neues Profilbild hinzugefügt werden. Außerdem ist es möglich den eigenen Account inklusiv aller Forum Beiträge zu löschen.
 
 **Administrator**\
 Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen.\
-Außerdem dient er als Moderator in dem Forum und kann daher das Recht alle Beiträge zu löschen.
+Außerdem dient er als Moderator des Forums und kann daher alle Beiträge löschen.
 
 ### 1.2 Wow-Faktor
 
@@ -52,14 +53,16 @@ Für die Umsetzung des Designs/Layouts, haben wir das Bootstrap Framework genutz
 Die Farben haben wir gewählt um eine positive Ausstrahlung zu erzielen.
 
 ### 2.2 MVC Umsetzung
-Für jede View existiert mindestens eine zugehörige Route, diese leitet, wenn ein Datenbank Zugriff stattfinden soll, auf einen Controller weiter, welcher dann ein Model nutzt um mit Tabellen zu interagieren. Die View wird dann mit den benötigten Parametern vom Controller zurück geliefert.
+
+Für jede View existiert mindestens eine zugehörige Route, diese leitet dann i.d.R. auf einen Controller weiter, welcher dann Models nutzen kann um mit Tabellen zu interagieren. Die View wird dann mit den benötigten Parametern vom Controller zurück geliefert.
+Die Routen sind dabei teilweise durch die Auth Middleware oder unsere eigene Admin Middleware geschützt (siehe Administrator Interface Umsetzung).
 
 ### 2.3 Zweistufiger Geschäftsprozess (Session Handling)
-Den zweistufigen Geschäftsprozess haben wir im Forum, bei einer neuen Beitrags-Erstellung, umgesetzt.
+Den zweistufigen Geschäftsprozess haben wir im Forum, wenn einer neuer Beitrag erstellt wird, umgesetzt.
 Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.\
 Bei der Auswahl der Kategorie wird eine Post Request an den Controller geschickt, dieser speichert dann die Kategorie in der Session ab.
 ```php
-$request->session()->put("category",$request->get('category'));
+$request->session()->put("category", $request->get('category'));
 ```
 Danach muss der User auf der nächsten Seite noch den Titel und Text des Beitrages schreiben. Nachdem er dies bestätigt, wird ein Forums Beitrag erstellt und der Controller ruft die davor gewählte Kategorie wieder aus der Session ab, um den Beitrag in der Datenbank zu speichern.
 ```php
@@ -95,7 +98,8 @@ Außerdem ist es möglich durch einen ausgewählten Parmeter nur bestimmte Ergeb
 
 ### 2.5 LaravelMix
 
-//ToDO
+Mit Laravel-Mix haben wir sowohl von den CSS Dateien, als auch von den JS Dateien jeweils eine komprimierte Datei (combinedCss und combinedJS) erstellt (analog zur Vorlesung).\
+Im App Layout werden dann nur noch diese Datein geladen. Somit hat sich die Geschwindigkeit der Website deutlich verbessert.
 
 ### 2.6 SEO Kriterien
 
