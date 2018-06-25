@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8857e9cf-f962-4055-81e8-42519868722e" name="Default" comment="Finish. only thing i need to do now is a direct route to the replies and change the authetification and change some CSS-Classes. If you want i can add a JS-Script which show you a message when you added a message. I can also Add a Edit workspace.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="8857e9cf-f962-4055-81e8-42519868722e" name="Default" comment="Admin can delete every">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/54b0412a-b28f-4b7f-834d-7b38174f561b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/54b0412a-b28f-4b7f-834d-7b38174f561b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EduShare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EduShare.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/forumRelease.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/forumRelease.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/72etyOUW0WvioyJMBNUGAnCOEj2m4TPBNaPW1iWF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/8E2D9ifOsaJzQ6VdpmQPXLXJhK6yhYSAZ22x1OAr" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/DrBUK3vQATQXOo93waJiBQqa6SQn6cGbvuwdxEw6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/GNmnWnMbJnEnQLirvI0GzREIeoRwtxsm0cIu4Oej" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/LTqPPOWemcjUeUYQtsNNOXR833KFGidiBaSpW9mH" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/Ss3KVM7XDjc8qgKIrr60USr0BtcnZyEKZB7AGt2V" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/hXMoqiGgy04bZR5kA2RJ9LNISL5CESfWrEZQ5wfd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/nPnp0PQjTElmR6BQ8pdm0ROsfQopH2c8fV4eI4Mn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/xzWgJOyfhMWWvAk6fqn6R4IgVvunhupRYcWEZ8rT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/hochschulen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hochschulen.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -100,7 +90,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <executablePath>composer</executablePath>
   </component>
@@ -120,81 +110,119 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="AmazonDB" type="feb32156:DbDataSourceImpl" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AmazonDB" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="AmazonDB" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="EduShare: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2054">
-              <caret line="88" column="67" selection-start-line="88" selection-start-column="67" selection-end-line="88" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/inc/navbar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1151">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForumController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ForumController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-              <folding>
-                <element signature="e#38#55#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PagesController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding>
-                <element signature="e#38#51#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forumRelease.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/forumRelease.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reply.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/reply.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="vertical" split-proportion="0.7336999">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="511">
+                  <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hochschulen.blade.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/resources/views/hochschulen.blade.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="624">
+                  <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="role" pinned="false" current-in-tab="true">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/role">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="users" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/users">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="posts" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/posts">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="replies" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/replies">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="categories" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/categories">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hochschulen" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/hochschulen">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="vorlesungen" pinned="false" current-in-tab="false">
+            <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/vorlesungen">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Blade" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -211,11 +239,25 @@
       <find>footer</find>
       <find>wete5</find>
       <find>log</find>
-      <find>reply</find>
-      <find>foo</find>
+      <find>test</find>
+      <find>bulk_up</find>
+      <find>register</find>
+      <find>auth</find>
+      <find>testEdit</find>
+      <find>bewertungH</find>
+      <find />
+      <find />
+      <find>imp</find>
+      <find>public</find>
+      <find>public1</find>
+      <find>antworten</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
+      <dir>D:\Programme\Github\EduShare</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -225,34 +267,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/hochschule.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_05_02_084358_create_aktivitaeten.php" />
-        <option value="$PROJECT_DIR$/database/seeds/aktivitaeten.php" />
-        <option value="$PROJECT_DIR$/resources/views/aktivitaet.blade.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/resources/views/hochschulen.blade.php" />
-        <option value="$PROJECT_DIR$/storage/framework/views/bddc257a09c5064d980fab6548a370ac9f1b64a4.php" />
-        <option value="$PROJECT_DIR$/resources/views/inc/footer.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/resources/views/account.blade.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7373c161-27ca-47e9-a7fa-129a7fbb91c7/console.sql" />
+        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/bootstrap/cache/config.php" />
-        <option value="$PROJECT_DIR$/app/Post.php" />
-        <option value="$PROJECT_DIR$/public/css/app.css" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/CreateReplyRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_06_03_152010_create_replies_table.php" />
+        <option value="$PROJECT_DIR$/app/Bewertungen.php" />
+        <option value="$PROJECT_DIR$/app/vorlesungen.php" />
+        <option value="$PROJECT_DIR$/app/hochschulen.php" />
+        <option value="$PROJECT_DIR$/app/aktivitaeten.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_06_14_081640_create_role_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
+        <option value="$PROJECT_DIR$/app/role.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/AdminCheck.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/database/seeds/aktivitaeten.php" />
+        <option value="$PROJECT_DIR$/public/js/url.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/54b0412a-b28f-4b7f-834d-7b38174f561b/console.sql" />
+        <option value="$PROJECT_DIR$/resources/views/admin.blade.php" />
+        <option value="$PROJECT_DIR$/public/Impressum/impressum.html" />
+        <option value="$PROJECT_DIR$/resources/views/impressum.blade.php" />
+        <option value="$PROJECT_DIR$/config/filesystems.php" />
+        <option value="$PROJECT_DIR$/resources/views/inc/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/customcss.css" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/ajaxJS.js" />
+        <option value="$PROJECT_DIR$/resources/views/bewerten.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/forumCategory.blade.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ForumController.php" />
         <option value="$PROJECT_DIR$/resources/views/forum.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/reply.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/inc/navbar.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/CreatePostRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PagesController.php" />
         <option value="$PROJECT_DIR$/resources/views/forumRelease.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AntwortenController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AntwortenControllers.php" />
+        <option value="$PROJECT_DIR$/resources/views/reply.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_06_01_142133_create_posts_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/kontakt.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/hochschule.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/hochschulen.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_04_28_125540_create_hochschulen.php" />
+        <option value="$PROJECT_DIR$/database/seeds/vorlesungen.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/hochschulen.blade.php" />
       </list>
     </option>
   </component>
@@ -269,6 +334,9 @@
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -352,125 +420,112 @@
       <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="461" />
+    <option name="y" value="-14" />
+    <option name="width" value="1800" />
+    <option name="height" value="1173" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Auth" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="ProfilePics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Requests" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="migrations" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="database" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="seeds" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="inc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="auth" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="inc" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="Router.php&#9;FILE&#9;file://D:/Programme/Github/EduShare/vendor/symfony/routing/Router.php&#10;RegisterC&#9;null&#9;null&#10;Auth&#9;FILE&#9;file://D:/Programme/Github/EduShare/resources/views/auth&#10;register&#9;ACTION&#9;WelcomeScreen.Register" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programme\Github\EduShare\public\image\hochschulen" />
+    </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
     <UpdatedFiles>
@@ -486,17 +541,22 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/database/seeds/kategorien.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/customcss.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/admin.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/forum.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.local.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dataSources/54b0412a-b28f-4b7f-834d-7b38174f561b.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/php.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/EduShare.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/README.md</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/Console/Kernel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/app.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/loading-bar.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/app.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/assets/sass/app.scss</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/forumRelease.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/impressum.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/inc/footer.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/inc/navbar.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/reply.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/welcome.blade.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/routes/web.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/resources/views/layouts/app.blade.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/logs/laravel.log</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/webpack.mix.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -504,6 +564,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/css/combinedCss.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/public/js/combinedJS.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -511,6 +573,15 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="true" />
           <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/72etyOUW0WvioyJMBNUGAnCOEj2m4TPBNaPW1iWF</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/8E2D9ifOsaJzQ6VdpmQPXLXJhK6yhYSAZ22x1OAr</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/DrBUK3vQATQXOo93waJiBQqa6SQn6cGbvuwdxEw6</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/GNmnWnMbJnEnQLirvI0GzREIeoRwtxsm0cIu4Oej</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/LTqPPOWemcjUeUYQtsNNOXR833KFGidiBaSpW9mH</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/Ss3KVM7XDjc8qgKIrr60USr0BtcnZyEKZB7AGt2V</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/hXMoqiGgy04bZR5kA2RJ9LNISL5CESfWrEZQ5wfd</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/nPnp0PQjTElmR6BQ8pdm0ROsfQopH2c8fV4eI4Mn</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/storage/framework/sessions/xzWgJOyfhMWWvAk6fqn6R4IgVvunhupRYcWEZ8rT</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Restored" />
@@ -670,12 +741,20 @@
       <workItem from="1528373156106" duration="1396000" />
       <workItem from="1528375785701" duration="8758000" />
       <workItem from="1528388299695" duration="250000" />
-      <workItem from="1528986443328" duration="866000" />
-      <workItem from="1529055038779" duration="4030000" />
-      <workItem from="1529141799394" duration="11468000" />
-      <workItem from="1529454735215" duration="2812000" />
-      <workItem from="1529487643235" duration="3764000" />
-      <workItem from="1529587407313" duration="1425000" />
+      <workItem from="1528882710159" duration="756000" />
+      <workItem from="1528915641143" duration="4155000" />
+      <workItem from="1528963215532" duration="6822000" />
+      <workItem from="1529138029282" duration="11203000" />
+      <workItem from="1529166148312" duration="2901000" />
+      <workItem from="1529242897926" duration="1222000" />
+      <workItem from="1529330266913" duration="1355000" />
+      <workItem from="1529351874729" duration="1803000" />
+      <workItem from="1529434553397" duration="983000" />
+      <workItem from="1529563666626" duration="1561000" />
+      <workItem from="1529594933507" duration="9267000" />
+      <workItem from="1529689624792" duration="4500000" />
+      <workItem from="1529855304473" duration="3201000" />
+      <workItem from="1529939960182" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="Started to implement Ranking Graph">
       <created>1526634867415</created>
@@ -733,32 +812,151 @@
       <option name="project" value="LOCAL" />
       <updated>1528386372250</updated>
     </task>
-    <task id="LOCAL-00009" summary="Finish. only thing i need to do now is a direct route to the replies and change the authetification and change some CSS-Classes. If you want i can add a JS-Script which show you a message when you added a message. I can also Add a Edit workspace.">
-      <created>1529456847209</created>
+    <task id="LOCAL-00009" summary="Added Admin interface at /admin">
+      <created>1528919676644</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1529456847209</updated>
+      <updated>1528919676644</updated>
     </task>
-    <task id="LOCAL-00010" summary="added missing files">
-      <created>1529487768034</created>
+    <task id="LOCAL-00010" summary="role table and admin rights automatic management">
+      <created>1528967291903</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1529487768034</updated>
+      <updated>1528967291903</updated>
     </task>
-    <task id="LOCAL-00011" summary="fixed some things">
-      <created>1529490985177</created>
+    <task id="LOCAL-00011" summary="Admin link in Dropdown of Admins">
+      <created>1528968287620</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1529490985177</updated>
+      <updated>1528968287620</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="User editable in Admin Interface">
+      <created>1528969436363</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1528969436363</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Admin page fixes">
+      <created>1529139728523</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529139728524</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Bewerten only accepts values between 0 and 100">
+      <created>1529142477232</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1529142477232</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Admin can delete DB entries">
+      <created>1529153632792</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1529153632792</updated>
+    </task>
+    <task id="LOCAL-00016" summary="New Carousel Image">
+      <created>1529158607789</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1529158607789</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Contact Page and Imprint update">
+      <created>1529168972492</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1529168972492</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Profile Image Upload without resizing - framework not needed anymore">
+      <created>1529353378163</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1529353378163</updated>
+    </task>
+    <task id="LOCAL-00019" summary="new formulation for Soccer Place on welcome view">
+      <created>1529434670630</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1529434670630</updated>
+    </task>
+    <task id="LOCAL-00020" summary="New Forum Concept">
+      <created>1529564393057</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1529564393057</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added Middleware">
+      <created>1529564584697</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1529564584697</updated>
+    </task>
+    <task id="LOCAL-00022" summary="clickable images on welcome view">
+      <created>1529565098277</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1529565098277</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Session storage works for category">
+      <created>1529604035242</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1529604035242</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Associated Category is shown on every post">
+      <created>1529691374992</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1529691374992</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Admins can delete every post and reply">
+      <created>1529692796715</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1529692796715</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Foreign Key relationships of Posts and Replies work during deletion of Account">
+      <created>1529693818482</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1529693818482</updated>
+    </task>
+    <task id="LOCAL-00027" summary="disabled register button">
+      <created>1529693949469</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1529693949469</updated>
+    </task>
+    <task id="LOCAL-00028" summary="New University and Google Maps location on every university page">
+      <created>1529858324578</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1529858324578</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70373000" />
+    <option name="totallyTimeSpent" value="88850000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,141 +968,158 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49745548" visible="true" weight="0.17826618" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14468865" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.5025445" side_tool="true" visible="true" weight="0.17826618" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.18039624" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.24191867" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.24191867" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18095239" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info id="Image Layers" order="7" />
-      <window_info id="npm" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32918552" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12881564" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.102564104" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.11154752" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.2238806" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="bottom" id="Database Console" order="11" weight="0.09347997" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14348172" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.07829889" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32918552" />
+      <window_info anchor="bottom" id="GitLabIntegration" order="12" weight="0.32996893" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.04658385" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-    </layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="9" weight="0.080683626" />
+      <window_info anchor="bottom" id="File Transfer" order="14" sideWeight="0.4995618" weight="0.20109977" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Started to implement Ranking Graph" />
-    <MESSAGE value="Activities and Universities now have Text and Ranking visible on there respective Page" />
     <MESSAGE value="Working on User Profile Pic" />
     <MESSAGE value="patch for heroku" />
     <MESSAGE value="changed error log" />
     <MESSAGE value="new procfile" />
     <MESSAGE value="try and error heroku transfer" />
-    <MESSAGE value="Finish. only thing i need to do now is a direct route to the replies and change the authetification and change some CSS-Classes. If you want i can add a JS-Script which show you a message when you added a message. I can also Add a Edit workspace." />
-    <MESSAGE value="added missing files" />
-    <MESSAGE value="fixed some things" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some things" />
+    <MESSAGE value="Added Admin interface at /admin" />
+    <MESSAGE value="role table and admin rights automatic management" />
+    <MESSAGE value="Admin link in Dropdown of Admins" />
+    <MESSAGE value="User editable in Admin Interface" />
+    <MESSAGE value="Admin page fixes" />
+    <MESSAGE value="Bewerten only accepts values between 0 and 100" />
+    <MESSAGE value="Admin can delete DB entries" />
+    <MESSAGE value="New Carousel Image" />
+    <MESSAGE value="Contact Page and Imprint update" />
+    <MESSAGE value="Profile Image Upload without resizing - framework not needed anymore" />
+    <MESSAGE value="new formulation for Soccer Place on welcome view" />
+    <MESSAGE value="New Forum Concept" />
+    <MESSAGE value="Added Middleware" />
+    <MESSAGE value="clickable images on welcome view" />
+    <MESSAGE value="Session storage works for category" />
+    <MESSAGE value="Associated Category is shown on every post" />
+    <MESSAGE value="Admins can delete every post and reply" />
+    <MESSAGE value="Foreign Key relationships of Posts and Replies work during deletion of Account" />
+    <MESSAGE value="disabled register button" />
+    <MESSAGE value="New University and Google Maps location on every university page" />
+    <option name="LAST_COMMIT_MESSAGE" value="New University and Google Maps location on every university page" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/reply.blade.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/aktivitaeten.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+        <state relative-caret-position="338">
+          <caret line="13" column="211" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="211" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/inc/navbar.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/Impressum/impressum.html" />
+    <entry file="file://$PROJECT_DIR$/public/Rechtliches/rechtliches.html" />
+    <entry file="file://$PROJECT_DIR$/resources/views/impressum.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+        <state relative-caret-position="364">
+          <caret line="14" column="105" selection-start-line="14" selection-start-column="105" selection-end-line="14" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Post.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="52">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ForumController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-          <folding>
-            <element signature="e#38#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php" />
-    <entry file="file://$PROJECT_DIR$/storage/framework/views/bddc257a09c5064d980fab6548a370ac9f1b64a4.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/hochschulen.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/bewertungen">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/image/ProfilePics/1527779369.jpg" />
-    <entry file="das://df307ba6-bd42-4a75-a8d4-a24e9389944e/schema/sql7233001/table/users" />
-    <entry file="das://7373c161-27ca-47e9-a7fa-129a7fbb91c7/schema/edushare/table/hochschulen" />
-    <entry file="das://7373c161-27ca-47e9-a7fa-129a7fbb91c7/schema/edushare/table/users" />
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/app.scss">
+    <entry file="file://$PROJECT_DIR$/app/Bewertungen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="208">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/account.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="30" column="68" selection-start-line="30" selection-start-column="61" selection-end-line="30" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1612">
+          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -915,101 +1130,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        <state relative-caret-position="858">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile" />
-    <entry file="file://$PROJECT_DIR$/config/app.php">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3250">
-          <caret line="125" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="776" column="66" selection-start-line="776" selection-start-column="66" selection-end-line="776" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/cache/config.php" />
-    <entry file="file://$PROJECT_DIR$/public/js/liveSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/aktivitaeten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="13" column="196" selection-start-line="13" selection-start-column="196" selection-end-line="13" selection-end-column="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/kategorien.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="20" column="70" lean-forward="true" selection-start-line="20" selection-start-column="70" selection-end-line="20" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="26">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/customcss.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="2786" selection-start-line="2786" selection-end-line="2786" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Parking/stylesheet.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="401">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/inc/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="15" selection-end-column="26" />
+        <state relative-caret-position="390">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DbController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="58" column="66" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ranking.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1058" />
+        <state relative-caret-position="338">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DbController.php">
+    <entry file="file://$PROJECT_DIR$/public/js/ajaxJS.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-628">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        <state relative-caret-position="650">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/bewerten.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="147" column="27" lean-forward="true" selection-start-line="147" selection-start-column="27" selection-end-line="147" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BewertenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="21" column="89" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forumCategory.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="86" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forum.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3692">
+          <caret line="142" column="68" selection-start-line="142" selection-start-column="68" selection-end-line="142" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreatePostRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5304">
+          <caret line="215" column="69" selection-start-line="215" selection-start-column="69" selection-end-line="215" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/forumRelease.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="42" column="96" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AntwortenController.php" />
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/role">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1020,71 +1257,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/CreateReplyRequest.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_01_142133_create_posts_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="286">
+          <caret line="18" column="90" selection-start-line="18" selection-start-column="90" selection-end-line="18" selection-end-column="90" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BewertenController.php">
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/posts.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="48" column="48" lean-forward="true" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/aktivitaeten.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_06_03_152010_create_replies_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1047" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/account.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="16" column="87" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+        <state relative-caret-position="130">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -1095,79 +1278,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/aktivitaet.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/bewerten.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forum.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/reply.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2054">
-          <caret line="88" column="67" selection-start-line="88" selection-start-column="67" selection-end-line="88" selection-end-column="67" />
+        <state relative-caret-position="504">
+          <caret line="90" column="48" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AntwortenControllers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ForumController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="75" column="32" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <element signature="e#38#55#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/inc/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1151">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        <state relative-caret-position="728">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="390">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="89" column="86" selection-start-line="89" selection-start-column="86" selection-end-line="89" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/reply.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="38" column="89" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/inc/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/kontakt.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="123" selection-start-line="12" selection-start-column="15" selection-end-line="13" selection-end-column="123" />
           <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
+            <element signature="e#656#1351#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2018_04_28_125540_create_hochschulen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/hochschule.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/hochschulen">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/hochschulen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/vorlesungen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="103" selection-start-line="17" selection-start-column="82" selection-end-line="17" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-780" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/vorlesungen">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="511">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/forumRelease.blade.php">
+    <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/hochschulen.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="51" column="28" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        <state relative-caret-position="624">
+          <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
         </state>
       </provider>
     </entry>
