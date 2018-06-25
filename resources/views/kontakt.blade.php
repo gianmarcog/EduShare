@@ -9,8 +9,9 @@
                 <p>EduShare</p>
                 <p>Alfred-Wachtel-Str. 8</p>
                 <p>78462 Konstanz</p>
-                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFXwYjWlimuQ4FU8C5Yn7GyB8q_vlbADc"></script>
                 <div id="gmeg_map_canvas"></div>
+                <script type="text/javascript"
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFXwYjWlimuQ4FU8C5Yn7GyB8q_vlbADc"></script>
                 <script>
                     var gmegMap, gmegMarker, gmegInfoWindow, gmegLatLng;
 
@@ -26,7 +27,8 @@
                         gmegInfoWindow.open(gmegMap, gmegMarker);
                     }
 
-                    google.maps.event.addDomListener(window, "load", gmegInitializeMap);</script>
+                    google.maps.event.addDomListener(window, "load", gmegInitializeMap);
+                </script>
             </div>
         </div>
     </div>

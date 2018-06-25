@@ -213,8 +213,9 @@ class AdminController
     public function deleteIdUS($id)
     {
         $user = User::where('id', '=', $id)->first();
+        $role = role::where('user_id','=',Auth::user()->id)->first();
 
-        if ($user->delete()) {
+        if ($user->delete() && $role->delete()) {
             $message = "Account wurde erfolgreich gelöscht";
             return Redirect::back()->with('message', $message);
         }

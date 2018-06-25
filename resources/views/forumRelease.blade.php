@@ -21,30 +21,31 @@
                                     <p>{{$post->body}}</p>
                                     <ul class="list-inline list-unstyled">
                                         <li><span><i class="glyphicon glyphicon-calendar"> </i>
-
+                                        @foreach($categories as $category)
+                                            @if($category->id === $post->category_id)
+                                                <li> Kategorie: {{$category->name}}</li>
+                                            @endif
+                                        @endforeach
                                         @if($post->replies->count() > 0)
                                             <li> {{$post->created_at->diffForHumans()}} </span>
                                                 | {{$post->replies->count()}} comment(s)
                                             </li>
-
-                                        @else()
-                                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte du als
-                                                erster
+                                        @else
+                                            <li> {{$post->created_at->diffForHumans()}} </span> | Antworte als erster
                                             </li>
                                         @endif
                                     </ul>
+
+
+                                    {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
+
+                                    {!! Form::hidden('post_id', $post->id) !!}
+                                    @if(Auth::user()->id === $post->user_id || $role->role === 1)
+                                        {!! Form::button('Delete', ['class' => 'btn btn-danger', 'type' =>'submit']) !!}
+                                    @endif
+
+                                    {!! Form::close() !!}
                                 </div>
-
-                                {!! Form::open(['route'=> 'delete_question', 'id' => 'delete-question-form', 'method' => 'DELETE', 'class' => 'text-right']) !!}
-
-                                {!! Form::hidden('post_id', $post->id) !!}
-                                <br/>
-                                @if(Auth::user()->id === $post->user_id)
-                                    {!! Form::button('Delete', ['class' => 'btn btn-danger mb-2 mr-2', 'type' =>'submit']) !!}
-                                @endif
-
-                                {!! Form::close() !!}
-
                             </div>
                         </div>
                     @endforeach

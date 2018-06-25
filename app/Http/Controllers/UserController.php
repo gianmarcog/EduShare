@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use App\hochschulen;
 use App\User;
+use App\role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -61,10 +62,11 @@ class UserController
     public function delete()
     {
         $user = User::find(Auth::user()->id);
+        $role = role::where('user_id','=',Auth::user()->id)->first();
 
         Auth::logout();
 
-        if ($user->delete()) {
+        if ($user->delete() && $role->delete()) {
 
             return redirect('/')->with('global', 'Dein Account wurde gelöscht!');
         } else {

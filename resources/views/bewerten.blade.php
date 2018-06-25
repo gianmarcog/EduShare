@@ -24,7 +24,7 @@
                         <tr>
                             <th id="column">Name</th>
                             <th id="column" class="notmobile">Standort</th>
-                            <th id="column">Deine Bewertung</th>
+                            <th id="column">Deine Bewertung in %</th>
                             <th id="column">&nbsp;</th>
                         </tr>
                         </thead>
@@ -74,7 +74,7 @@
                     <tr>
                         <th id="column">Name</th>
                         <th id="column" class="notmobile">Professor</th>
-                        <th id="column">Deine Bewertung</th>
+                        <th id="column">Deine Bewertung in %</th>
                         <th id="detail">&nbsp;</th>
                     </tr>
                     </thead>
@@ -141,7 +141,7 @@
                     <tr>
                         <th id="column">Aktivität</th>
                         <th id="column" class="notmobile">Standort</th>
-                        <th id="column">Deine Bewertung</th>
+                        <th id="column">Deine Bewertung in %</th>
                         <th id="detail">&nbsp;</th>
                     </tr>
                     </thead>

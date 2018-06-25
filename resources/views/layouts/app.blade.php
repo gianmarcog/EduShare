@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="EthldYoBjtVdmUeCcbk_ZndULxHL11PKIvrd9T82GL0" />
-    <meta name="description" content="EduShare - Die Studenten Plattform von Studenten für Studenten!"/>
+    <meta name="description" content="EduShare - Die Platform für Studenten und Studieninteressierte"/>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -38,13 +38,8 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 <script src="/js/cookies.js"></script>
 <script src="/js/loading-bar.js"></script>
-<script src="/js/liveSearch.js"></script>
-
-<script>
-    $('.pagination li').addClass("page-item");
-    $('.pagination a').addClass("page-link");
-    $('.pagination span').addClass("page-link");
-</script>
+<script src="/js/ajaxJS.js"></script>
+<script src="/js/pageNumberDesign.js"></script>
 @yield('scripts')
 
 </body>
