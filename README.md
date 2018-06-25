@@ -95,7 +95,8 @@ Außerdem ist es möglich durch einen ausgewählten Parmeter nur bestimmte Ergeb
 
 ### 2.5 LaravelMix
 
-//ToDO
+Mit Laravel-Mix haben wir sowohl für die CSS Dateien, als auch für die JS Dateien jeweils eine komprimierte Datei (combinedCss und combinedJS) erstellt und laden dann im App Layout
+nur noch diese Datein. Somit hat sich die Geschwindigkeit der Website deutlich verbessert.
 
 ### 2.6 SEO Kriterien
 
