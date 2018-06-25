@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8857e9cf-f962-4055-81e8-42519868722e" name="Default" comment="Admin can delete every">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/54b0412a-b28f-4b7f-834d-7b38174f561b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/54b0412a-b28f-4b7f-834d-7b38174f561b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="8857e9cf-f962-4055-81e8-42519868722e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EduShare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EduShare.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/hochschulen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/hochschulen.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/laravel.log" beforeDir="false" afterPath="$PROJECT_DIR$/storage/logs/laravel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/session.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/" />
@@ -137,11 +131,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hochschulen.blade.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="session.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/config/session.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1699">
+                  <caret line="170" column="22" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hochschulen.blade.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/resources/views/hochschulen.blade.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="624">
-                  <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+                  <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="combinedJS.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/combinedJS.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="711">
+                  <caret column="13778" lean-forward="true" selection-start-column="13778" selection-end-column="13778" />
                 </state>
               </provider>
             </entry>
@@ -246,11 +258,11 @@
       <find>testEdit</find>
       <find>bewertungH</find>
       <find />
-      <find />
       <find>imp</find>
       <find>public</find>
       <find>public1</find>
       <find>antworten</find>
+      <find>window.open</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -267,9 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/account.blade.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7373c161-27ca-47e9-a7fa-129a7fbb91c7/console.sql" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/config/app.php" />
@@ -318,6 +327,9 @@
         <option value="$PROJECT_DIR$/database/seeds/vorlesungen.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/hochschulen.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/js/combinedJS.js" />
+        <option value="$PROJECT_DIR$/config/session.php" />
       </list>
     </option>
   </component>
@@ -445,64 +457,7 @@
             <path>
               <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
               <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="ProfilePics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EduShare" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EduShare" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -754,7 +709,7 @@
       <workItem from="1529594933507" duration="9267000" />
       <workItem from="1529689624792" duration="4500000" />
       <workItem from="1529855304473" duration="3201000" />
-      <workItem from="1529939960182" duration="640000" />
+      <workItem from="1529939960182" duration="1268000" />
     </task>
     <task id="LOCAL-00001" summary="Started to implement Ranking Graph">
       <created>1526634867415</created>
@@ -952,11 +907,25 @@
       <option name="project" value="LOCAL" />
       <updated>1529858324578</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Found the error of opening a blank tab">
+      <created>1529940805129</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1529940805129</updated>
+    </task>
+    <task id="LOCAL-00030" summary="session fix">
+      <created>1529941038337</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1529941038337</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88850000" />
+    <option name="totallyTimeSpent" value="89478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1039,8 +1008,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Working on User Profile Pic" />
-    <MESSAGE value="patch for heroku" />
     <MESSAGE value="changed error log" />
     <MESSAGE value="new procfile" />
     <MESSAGE value="try and error heroku transfer" />
@@ -1064,7 +1031,9 @@
     <MESSAGE value="Foreign Key relationships of Posts and Replies work during deletion of Account" />
     <MESSAGE value="disabled register button" />
     <MESSAGE value="New University and Google Maps location on every university page" />
-    <option name="LAST_COMMIT_MESSAGE" value="New University and Google Maps location on every university page" />
+    <MESSAGE value="Found the error of opening a blank tab" />
+    <MESSAGE value="session fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="session fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1072,15 +1041,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/seeds/aktivitaeten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="211" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/Impressum/impressum.html" />
-    <entry file="file://$PROJECT_DIR$/public/Rechtliches/rechtliches.html" />
     <entry file="file://$PROJECT_DIR$/resources/views/impressum.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1394,13 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://54b0412a-b28f-4b7f-834d-7b38174f561b/schema/EduShare/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1408,10 +1361,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret column="3013" selection-start-column="3013" selection-end-column="3013" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/hochschulen.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+          <caret line="24" column="71" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/combinedJS.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret column="13778" lean-forward="true" selection-start-column="13778" selection-end-column="13778" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1699">
+          <caret line="170" column="22" selection-start-line="170" selection-start-column="22" selection-end-line="170" selection-end-column="22" />
         </state>
       </provider>
     </entry>
