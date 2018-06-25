@@ -14,3 +14,16 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
 
+mix.styles([
+    'public/css/customcss.css',
+    'public/css/loading-bar.css'
+],'public/css/combinedCss.css');
+
+mix.scripts([
+    'public/js/ajaxJS.js',
+    'public/js/cookies.js',
+    'public/js/loading-bar.js',
+    'public/js/pageNumberDesign.js',
+    'public/js/url.js'
+],'public/js/combinedJS.js');
+

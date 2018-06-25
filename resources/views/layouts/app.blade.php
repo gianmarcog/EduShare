@@ -16,10 +16,9 @@
     <link rel="icon" href="/image/Logosmall.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/customcss.css">
-    <link rel="stylesheet" href="/css/loading-bar.css">
     <link rel="stylesheet" type="text/css"
           href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
+    <link rel="stylesheet" href="/css/combinedCss.css">
 
 
 </head>
@@ -33,13 +32,9 @@
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="/js/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script src="/js/cookies.js"></script>
-<script src="/js/loading-bar.js"></script>
-<script src="/js/ajaxJS.js"></script>
-<script src="/js/pageNumberDesign.js"></script>
+<script src="/js/combinedJS.js"></script>
 @yield('scripts')
 
 </body>
