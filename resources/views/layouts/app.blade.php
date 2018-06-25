@@ -35,7 +35,7 @@
 <script src="/js/app.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
-<script src="/js/combinedJS"></script>
+<script src="/js/combinedJS.js"></script>
 @yield('scripts')
 
 </body>
