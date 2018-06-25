@@ -23,7 +23,9 @@
 
 **Angemeldeter Student**\
 Als Student kann man Hochschulen und Vorlesungen bewerten, sich über Aktivitäten in dem jeweiligem Studienort informieren und diese ebenso bewerten.\
-Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.
+Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.\
+Nach der Anmeldung können Account Daten noch bearbeitet werden und ein neues Profilbild hinzugefügt werden. Außerdem ist es möglich den eigenen Account inklusiv aller Forum Beiträge
+zu löschen.
 
 **Nicht angemeldete Nutzer**\
 Nicht angemeldete Nutzer können z. B. Schüler bzw. Studieninteressierte sein, welche sich dann Dank der EduShare Plattform über verschiedene Hochschulen und die Aktivitäten des Studienortes informieren können.\
