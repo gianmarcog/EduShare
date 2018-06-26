@@ -21,18 +21,18 @@
 ---
 ### 1.1 Use Cases
 
-**Nicht angemeldete Nutzer**
+**Nicht angemeldete Nutzer:**
 Nicht angemeldete Nutzer können z. B. Schüler sein, welche sich dann Dank der EduShare Plattform in der Ranking Rubrik über verschiedene Hochschulen, Vorlesungen und Aktivitäten des Studienortes, inklusiv Bewertung, informieren können.
 Weiterhin gibt es zu jeder Hochschule und Aktivität eine Informationsseite, in der immer ein Bild mit Beschreibung hinterlegt ist und auch die Bewertung nochmal graphisch dargestellt wird. Bei Hochschulen ist auf der Informationsseite zusätzlich der Standort auf Google Maps und die angebotenen Vorlesungen mit Bewertung hinterlegt.
 Außerdem können Sie natürlich die universelle Suche mit Filterfunktion benutzen, um z.B. alle Aktivitäten eines Ortes zu sehen.
 
-**Angemeldeter Student**
+**Angemeldeter Student:**
 Als angemeldeter Student hat man alle Funktionen, die auch ein nicht angemeldeter Nutzer hat, allerdings auch noch einige Funktionen die exklusiv für angemeldete Studenten vorhanden sind.
 Unter der Bewerten Rubrik können die eigene Hochschule inkl. den Vorlesungen und die Aktivitäten des Studienortes in Prozent einmalig bewertet werden.
 Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.
 Nach der Anmeldung können Account Daten noch bearbeitet werden und ein neues Profilbild hinzugefügt werden. Außerdem ist es möglich den eigenen Account inklusiv aller Forum Beiträge zu löschen.
 
-**Administrator**
+**Administrator:**
 Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen.
 Außerdem dient er als Moderator des Forums und kann daher alle Beiträge löschen.
 
@@ -116,7 +116,7 @@ Das Nutzerpasswort wird auch in einen Hash umgewandelt und nur so in der Datenba
 
 ### 2.8 Sonstige technische Umsetzungen
 
-**Account Seite**
+**Account Seite:**
 Für einen angemeldeten User ist es möglich die E-Mail Adresse und die Hochschule zu verändern. Außerdem kann er sein Profilbild verändern.
 Die Profilbild Funktion haben wir umgesetzt indem wir in der filesystems.php config Datei einen neuen Pfad unter disks hinzugefügt haben.
 ```php
@@ -128,23 +128,30 @@ Die Profilbild Funktion haben wir umgesetzt indem wir in der filesystems.php con
 In dem Controller UserController in der Funktion update_avatar, wird das vom User ausgewählte Bild verarbeitet, ein Dateiname mit dem Zeitstempel erstellt und dann in dem oben beschriebenen Pfad gespeichert. Danach wird noch der Dateiname
 dem User als Avatar in der User Tabelle hinterlegt.
 
-**Bewerten Funktionalität**
+**Bewerten Funktionalität:**
 Jeder angemeldete Nutzer kann für seine Hochschule, die Vorlesungen der Hochschule und die Aktivitäten seines Studienortes Bewertungen abgeben.
-Nachdem er eine Bewertung abgegeben hat kann diese nicht mehr verändert werden und wird automatisch mit allen bisher abgegebenen Bewertungen für diese Entität verrechnet und die neue Durchschnittsbewertung wird automatisch in den Datenbankeintrag der Entität hinzugefügt.
+Nachdem er eine Bewertung abgegeben hat kann diese nicht mehr verändert werden.
+Das haben wir durch eine Bewertungen Tabelle umgesetzt, in der nach jeder neuen Bewertung ein neuer Eintrag mit dieser Bewertung und dem User erstellt wird. Gleichzeitig ruft der BewertenController in der store Funktion noch die refresh Funktion auf,
+welche dann dafür sorgt, dass die neue Durchschnittsbewertung für Hochschulen, Vorlesungen und Aktivitäten direkt berechnet wird und in die jeweiligen Rankings eingetragen wird.
 
-**Ranking**
+**Ranking:**
 In der Ranking Ansicht sind alle vorhandenen Hochschulen, Aktivitäten und Vorlesungen mit ihrer Bewertung gelistet.
 Alle Nutzer (auch nicht angemeldete) können sich so über Hochschulen etc. informieren und kommen dann jeweils auf eine Übersichtsseite.
-Auf den Hochschul Übersichtsseiten werden auch die zugehörigen Vorlesungen mit ihrer Bewertung angezeigt.
+Auf den Hochschul Übersichtsseiten werden auch die dort angebotenen Vorlesungen mit ihrer Bewertung angezeigt.
 
-**Administrator Interface**
-Auf das Administrator Interface können nur Nutzer zugreifen, welche in der Rollen Tabelle als Administrator hinterlegt sind.
+**Administrator Interface:**
+Auf das Administrator Interface können nur Nutzer zugreifen, welche in der Rollen Tabelle als Administrator (role => 1) hinterlegt sind.
 Im Administrator Interface können alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeitet und gelöscht werden. 
+Außerdem ist es möglich gleichzeitig mehrere Daten zu aktualisieren, wenn z. B. von mehreren Benutzern die Hochschule auf eine andere geändert werden soll.
 Wenn ein Nutzer gelöscht wird, werden auch automatisch alle Forums Beiträge und Antworten von diesem Nuter gelöscht. Dies haben wir mit den Model Relationships und Foreign Keys mit dem Constraint onDelete Cascade umgesetzt.
-Weiterhin haben alle Administratoren das Recht, alle Forums Beiträge zu löschen.
-Die Kontrolle ob jemand ein Administrator ist und somit auf eine Route zugreifen darf, findet über die Middleware AdminCheck statt.
+Weiterhin haben alle Administratoren das Recht, alle Forum Beiträge zu löschen.
+Die Kontrolle ob jemand ein Administrator ist, findet für Routen über die Middleware AdminCheck statt. In Views kann mit 
+```php
+@if(Auth::user()->isAdmin())
+```
+überprüft werden, ob ein Nutzer Admin Rechte besitzt. Über diese Funktion wird z. B. geregelt ob der Knopf für das Admin Interface dem User in seinen Account Funktionen angezeigt wird.
 
-**Forum**
+**Forum:**
 Im Forum können angemeldete Nutzer Beiträge erstellen und auf Beiträge Antworten.
 Die Beiträge sind mit den Antworten über eine Model Relationship und den zugehörigen Foreign Keys verknüpft.
 Beim löschen eines Beitrages werden automatisch auch alle Antworten zu diesem Post über den Constraint onDelete Cascade mitgelöscht.
