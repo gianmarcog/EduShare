@@ -48,10 +48,6 @@ class UserController
             if(!Storage::disk('public_uploads')->putFileAs('/', $avatar, $filename)) {
                 return false;
             }
-
-            /*
-            Image::make($avatar)->resize(300, 300)->save(public_path('/image/ProfilePics/' . $filename));
-            */
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();

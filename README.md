@@ -21,29 +21,29 @@
 ---
 ### 1.1 Use Cases
 
-**Nicht angemeldete Nutzer**\
-Nicht angemeldete Nutzer können z. B. Schüler sein, welche sich dann Dank der EduShare Plattform in der Ranking Rubrik über verschiedene Hochschulen, Vorlesungen und Aktivitäten des Studienortes, inklusiv Bewertung, informieren können.\
-Weiterhin gibt es zu jeder Hochschule und Aktivität eine Informationsseite, in der immer ein Bild mit Beschreibung hinterlegt ist und auch die Bewertung nochmal graphisch dargestellt wird. Bei Hochschulen ist auf der Informationsseite zusätzlich der Standort auf Google Maps und die angebotenen Vorlesungen mit Bewertung hinterlegt.\
+**Nicht angemeldete Nutzer**
+Nicht angemeldete Nutzer können z. B. Schüler sein, welche sich dann Dank der EduShare Plattform in der Ranking Rubrik über verschiedene Hochschulen, Vorlesungen und Aktivitäten des Studienortes, inklusiv Bewertung, informieren können.
+Weiterhin gibt es zu jeder Hochschule und Aktivität eine Informationsseite, in der immer ein Bild mit Beschreibung hinterlegt ist und auch die Bewertung nochmal graphisch dargestellt wird. Bei Hochschulen ist auf der Informationsseite zusätzlich der Standort auf Google Maps und die angebotenen Vorlesungen mit Bewertung hinterlegt.
 Außerdem können Sie natürlich die universelle Suche mit Filterfunktion benutzen, um z.B. alle Aktivitäten eines Ortes zu sehen.
 
-**Angemeldeter Student**\
-Als angemeldeter Student hat man alle Funktionen, die auch ein nicht angemeldeter Nutzer hat, allerdings auch noch einige Funktionen die exklusiv für angemeldete Studenten vorhanden sind.\
+**Angemeldeter Student**
+Als angemeldeter Student hat man alle Funktionen, die auch ein nicht angemeldeter Nutzer hat, allerdings auch noch einige Funktionen die exklusiv für angemeldete Studenten vorhanden sind.
 Unter der Bewerten Rubrik können die eigene Hochschule inkl. den Vorlesungen und die Aktivitäten des Studienortes in Prozent einmalig bewertet werden.
-Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.\
+Das Forum bietet die Möglichkeit Fragen und Antworten zu schreiben oder sonstige Beiträge zu erstellen.
 Nach der Anmeldung können Account Daten noch bearbeitet werden und ein neues Profilbild hinzugefügt werden. Außerdem ist es möglich den eigenen Account inklusiv aller Forum Beiträge zu löschen.
 
-**Administrator**\
-Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen.\
+**Administrator**
+Der Adminstrator kann auf das Admin Interface zugreifen und dort alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeiten und löschen.
 Außerdem dient er als Moderator des Forums und kann daher alle Beiträge löschen.
 
 ### 1.2 Wow-Faktor
 
-Die EduShare Plattform sticht aus der Menge der Internet Plattformen hervor, indem sie alle Bedürfnisse für Studenten und Studieninteressierte erfüllt.\
+Die EduShare Plattform sticht aus der Menge der Internet Plattformen hervor, indem sie alle Bedürfnisse für Studenten und Studieninteressierte erfüllt.
 Besonders ist vor allem das umfangreiche Ranking System, das Forum und die universelle, in Kategorien aufgeteilte, Suche.
 
 ### 1.3 Visual Design
 
-Die EduShare Plattform nutzt ein modernes und einheitliches Design, welches es ermöglicht schnell und übersichtlich die gewünschten Funktionen zu erreichen.\
+Die EduShare Plattform nutzt ein modernes und einheitliches Design, welches es ermöglicht schnell und übersichtlich die gewünschten Funktionen zu erreichen.
 Alle Seiten der Plattform sind durch das responsive Design mit jeder Art von Gerät gleich gut benutzbar.
 
 ---
@@ -59,7 +59,7 @@ Die Routen sind dabei teilweise durch die Auth Middleware oder unsere eigene Adm
 
 ### 2.3 Zweistufiger Geschäftsprozess (Session Handling)
 Den zweistufigen Geschäftsprozess haben wir im Forum, wenn einer neuer Beitrag erstellt wird, umgesetzt.
-Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.\
+Wenn ein User einen neuen Beitrag erstellen will, muss er zuerst die Kategorie des Beitrags auswählen.
 Bei der Auswahl der Kategorie wird eine Post Request an den Controller geschickt, dieser speichert dann die Kategorie in der Session ab.
 ```php
 $request->session()->put("category", $request->get('category'));
@@ -93,12 +93,12 @@ $('#search').on('keydown', function () {
     })
 });
 ```
-Der Controller sucht dann in der Datenbank nach dem Such String und liefert die Ergebnisse als HTML zurück.\
+Der Controller sucht dann in der Datenbank nach dem Such String und liefert die Ergebnisse als HTML zurück.
 Außerdem ist es möglich durch einen ausgewählten Parmeter nur bestimmte Ergebnisse, wie z. B. Hochschulen, zu erhalten.
 
 ### 2.5 LaravelMix
 
-Mit Laravel-Mix haben wir sowohl von den CSS Dateien, als auch von den JS Dateien jeweils eine komprimierte Datei (combinedCss und combinedJS) erstellt (analog zur Vorlesung).\
+Mit Laravel-Mix haben wir sowohl von den CSS Dateien, als auch von den JS Dateien jeweils eine komprimierte Datei (combinedCss und combinedJS) erstellt (analog zur Vorlesung).
 Im App Layout werden dann nur noch diese Datein geladen. Somit hat sich die Geschwindigkeit der Website deutlich verbessert.
 
 ### 2.6 SEO Kriterien
@@ -116,25 +116,37 @@ Das Nutzerpasswort wird auch in einen Hash umgewandelt und nur so in der Datenba
 
 ### 2.8 Sonstige technische Umsetzungen
 
-**Bewerten Funktionalität**\
-Jeder angemeldete Nutzer kann für seine Hochschule, die Vorlesungen der Hochschule und die Aktivitäten seines Studienortes Bewertungen abgeben.\
+**Account Seite**
+Für einen angemeldeten User ist es möglich die E-Mail Adresse und die Hochschule zu verändern. Außerdem kann er sein Profilbild verändern.
+Die Profilbild Funktion haben wir umgesetzt indem wir in der filesystems.php config Datei einen neuen Pfad unter disks hinzugefügt haben.
+```php
+'public_uploads' => [
+            'driver' => 'local',
+            'root'   => public_path() . '/image/ProfilePics',
+        ],
+```
+In dem Controller UserController in der Funktion update_avatar, wird das vom User ausgewählte Bild verarbeitet, ein Dateiname mit dem Zeitstempel erstellt und dann in dem oben beschriebenen Pfad gespeichert. Danach wird noch der Dateiname
+dem User als Avatar in der User Tabelle hinterlegt.
+
+**Bewerten Funktionalität**
+Jeder angemeldete Nutzer kann für seine Hochschule, die Vorlesungen der Hochschule und die Aktivitäten seines Studienortes Bewertungen abgeben.
 Nachdem er eine Bewertung abgegeben hat kann diese nicht mehr verändert werden und wird automatisch mit allen bisher abgegebenen Bewertungen für diese Entität verrechnet und die neue Durchschnittsbewertung wird automatisch in den Datenbankeintrag der Entität hinzugefügt.
 
-**Ranking**\
+**Ranking**
 In der Ranking Ansicht sind alle vorhandenen Hochschulen, Aktivitäten und Vorlesungen mit ihrer Bewertung gelistet.
 Alle Nutzer (auch nicht angemeldete) können sich so über Hochschulen etc. informieren und kommen dann jeweils auf eine Übersichtsseite.
 Auf den Hochschul Übersichtsseiten werden auch die zugehörigen Vorlesungen mit ihrer Bewertung angezeigt.
 
-**Administrator Interface**\
+**Administrator Interface**
 Auf das Administrator Interface können nur Nutzer zugreifen, welche in der Rollen Tabelle als Administrator hinterlegt sind.
 Im Administrator Interface können alle Daten von Nutzern, Hochschulen, Vorlesungen und Aktivitäten bearbeitet und gelöscht werden. 
-Wenn ein Nutzer gelöscht wird, werden auch automatisch alle Forums Beiträge und Antworten von diesem Nuter gelöscht. Dies haben wir mit den Model Relationships und Foreign Keys mit dem Constraint onDelete Cascade umgesetzt.\
+Wenn ein Nutzer gelöscht wird, werden auch automatisch alle Forums Beiträge und Antworten von diesem Nuter gelöscht. Dies haben wir mit den Model Relationships und Foreign Keys mit dem Constraint onDelete Cascade umgesetzt.
 Weiterhin haben alle Administratoren das Recht, alle Forums Beiträge zu löschen.
 Die Kontrolle ob jemand ein Administrator ist und somit auf eine Route zugreifen darf, findet über die Middleware AdminCheck statt.
 
-**Forum**\
+**Forum**
 Im Forum können angemeldete Nutzer Beiträge erstellen und auf Beiträge Antworten.
-Die Beiträge sind mit den Antworten über eine Model Relationship und den zugehörigen Foreign Keys verknüpft.\
+Die Beiträge sind mit den Antworten über eine Model Relationship und den zugehörigen Foreign Keys verknüpft.
 Beim löschen eines Beitrages werden automatisch auch alle Antworten zu diesem Post über den Constraint onDelete Cascade mitgelöscht.
 Jeder Beitrag hat einen Zeitstempel welcher mit 'diffforhumans' in eine verständliche zeitliche Differenz umgewandelt wird.
 Zu jedem Beitrag wird außerdem der Ersteller, die Anzahl der Antworten und die Kategorie des Posts angezeigt.
