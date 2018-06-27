@@ -24,7 +24,7 @@ class AdminController
             ->get()
         ;
         // $test_columns = Schema::getColumnListing('tests');
-        $user = new hochschulen();
+        $user = new User();
         $fillable_columns = $user->getFillable();
         foreach ($fillable_columns as $key => $value) {
             $user_Spalten[$value] = $value;
