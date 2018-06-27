@@ -7,6 +7,7 @@
                 <h1>Kontakt</h1>
                 <hr>
                 <p>EduShare</p>
+                <p>rene.borner@htwg-konstanz.de</p>
                 <p>Alfred-Wachtel-Str. 8</p>
                 <p>78462 Konstanz</p>
                 <div id="gmeg_map_canvas"></div>
