@@ -129,7 +129,7 @@ class searchController
     </div>';
         }
         if (count($hochschulen) === 0 && count($aktivitaeten) === 0 && count($vorlesungen) === 0) {
-            $html .= '<h4 class="col-4 mx-auto">Keine Ergebnisse gefunden!</h4>';
+            $html .= '<h4 class="col-12 mx-auto text-center">Keine Ergebnisse gefunden!</h4>';
         }
         return $html;
     }
