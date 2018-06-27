@@ -6,7 +6,7 @@
             <div class="col-md-6 mx-auto">
                 <h5 class="text-uppercase">EduShare</h5>
                 <p>Die EduShare Plattform ist ein Projekt von Gianmarco Giretti und René Borner für die Web-Tech
-                    Vorlesung.</p>
+                    Vorlesung. Sie dient keinem langfristigen Nutzen und ist nur als ein Projekt anzusehen.</p>
             </div>
 
             <div class="col-md-4 ">
@@ -33,7 +33,7 @@
             <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x social"></i></a>
             <a href="https://twitter.com"><i class="fa fa-twitter-square fa-3x social"></i></a>
             <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-3x social"></i></a>
-            <a href="mailto:marco.giretti9@gmail.com"><i class="fa fa-envelope-square fa-3x social"></i></a>
+            <a href="mailto:rene.borner@htwg-konstanz.de"><i class="fa fa-envelope-square fa-3x social"></i></a>
         </div>
     </div>
 </footer>

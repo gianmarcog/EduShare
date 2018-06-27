@@ -8,6 +8,7 @@
                 <hr>
                 <h2>Angaben gem&auml;&szlig; &sect; 5 TMG:</h2>
                 <p>René Borner
+                    <br/> rene.borner@htwg-konstanz.de
                     <br/> Schürmann-Horster-Weg
                     <br/> 6
                     <br/> 78467 Konstanz</p>
@@ -62,28 +63,6 @@
                     Deaktivierung
                     von Cookies kann die Funktionalit&auml;t dieser Website eingeschr&auml;nkt sein.</p>
                 <p>&nbsp;</p>
-                <h2> Kontaktformular</h2>
-                <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
-                    Anfrageformular
-                    inklusive der
-                    von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und f&uuml;r den Fall von
-                    Anschlussfragen bei
-                    uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-                <p>&nbsp;</p>
-                <h2>Google Analytics</h2>
-                <p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc.,
-                    1600
-                    Amphitheatre Parkway Mountain View, CA 94043, USA.</p>
-                <p>Google Analytics verwendet so genannte &quot;Cookies&quot;. Das sind Textdateien, die auf Ihrem
-                    Computer
-                    gespeichert
-                    werden und die eine Analyse der Benutzung der Website durch Sie erm&ouml;glichen. Die durch den
-                    Cookie
-                    erzeugten
-                    Informationen &uuml;ber Ihre Benutzung dieser Website werden in der Regel an einen Server von Google
-                    in den
-                    USA
-                    &uuml;bertragen und dort gespeichert.</p>
                 <p><strong>Browser Plugin</strong></p>
                 <p>Sie k&ouml;nnen die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer
                     Browser-Software
@@ -102,21 +81,11 @@
                             href="https://tools.google.com/dlpage/gaoptout?hl=de">
                         https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
                 <p><strong>Widerspruch gegen Datenerfassung</strong></p>
-                <p>Sie k&ouml;nnen die Erfassung Ihrer Daten durch Google Analytics verhindern, indem Sie auf folgenden
-                    Link
-                    klicken. Es
-                    wird ein Opt-Out-Cookie gesetzt, der die Erfassung Ihrer Daten bei zuk&uuml;nftigen Besuchen dieser
-                    Website
-                    verhindert: <a href="javascript:gaOptout();"> Google Analytics deaktivieren</a></p>
-                <p>Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics finden Sie in der Datenschutzerkl&auml;rung
-                    von
-                    Google: <a href="https://support.google.com/analytics/answer/6004245?hl=de">
-                        https://support.google.com/analytics/answer/6004245?hl=de</a></p>
                 <p>&nbsp;</p>
                 <h2>Kommentarfunktion auf dieser Webseite</h2>
-                <p>F&uuml;r die Kommentarfunktion auf dieser Seite werden neben Ihrem Kommentar auch Angaben zum
+                <p>F&uuml;r die Forumfunktion auf dieser Seite werden neben Ihrem Beitrag auch Angaben zum
                     Zeitpunkt der
-                    Erstellung des Kommentars, Ihre E-Mail-Adresse und, wenn Sie nicht anonym posten, der von Ihnen gew&auml;hlte
+                    Erstellung des Kommentars, Ihre E-Mail-Adresse und, der von Ihnen gew&auml;hlte
                     Nutzername gespeichert.</p>
                 <p>&nbsp;</p>
                 <h2>SSL-Verschl&uuml;sselung</h2>
