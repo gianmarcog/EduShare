@@ -135,7 +135,9 @@
         <div class="row">
             <div class="col-12">
                 <p></p>
-                <h3>Aktivitäten in Konstanz</h3>
+                @foreach ($as as $a)
+                <h3>Aktivitäten in {{  $a->standort }}</h3>
+                @endforeach
                 <table class="table">
                     <thead>
                     <tr>
