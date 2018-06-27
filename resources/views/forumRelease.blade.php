@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-heading"><a
+                                    <h4 class="card-heading"><a style="color: #004561"
                                                 href="/forum/antworten/{{$post->id}}">{{$post->title}}</a></h4>
                                     <p class="text-right">Von: {{$post->user->name}}</p>
                                     <p>{{$post->body}}</p>
