@@ -80,9 +80,8 @@
                     Browser-Plugin herunterladen und installieren: <a
                             href="https://tools.google.com/dlpage/gaoptout?hl=de">
                         https://tools.google.com/dlpage/gaoptout?hl=de</a></p>
-                <p><strong>Widerspruch gegen Datenerfassung</strong></p>
                 <p>&nbsp;</p>
-                <h2>Kommentarfunktion auf dieser Webseite</h2>
+                <h2>Forumfunktion auf dieser Webseite</h2>
                 <p>F&uuml;r die Forumfunktion auf dieser Seite werden neben Ihrem Beitrag auch Angaben zum
                     Zeitpunkt der
                     Erstellung des Kommentars, Ihre E-Mail-Adresse und, der von Ihnen gew&auml;hlte
